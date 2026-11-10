@@ -51,7 +51,7 @@ export function CostumePage() {
           <p className="text-xs tracking-widest text-rose">{code}</p>
           <h1 className="mt-2 font-display text-5xl leading-tight">{item.name}</h1>
           <p className="mt-4 text-muted">{item.note}</p>
-          <p className="mt-6 text-sm">Tarif {rate} per acara, termasuk cek ukuran.</p>
+          <p className="mt-6 text-sm">{rate}</p>
           <a href={ask} className="mt-8 inline-flex bg-ink px-5 py-3 text-sm text-cream">Tanya set ini</a>
           <div className="mt-12 flex items-start justify-between gap-6 border-t border-rose/30 pt-6 text-sm">
             {prev !== null ? (

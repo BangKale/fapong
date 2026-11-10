@@ -8,7 +8,7 @@ export function Home() {
         <div className="w-full md:w-5/12">
           <p className="text-xs uppercase tracking-widest text-rose">Karawang · sewa per acara</p>
           <h1 className="mt-4 font-display text-5xl leading-tight md:text-6xl">Kostum Jaipong yang siap naik panggung.</h1>
-          <p className="mt-5 max-w-sm text-muted">Busana di foto adalah set yang disewakan. Tarif mulai {rate} per acara, termasuk cek ukuran.</p>
+          <p className="mt-5 max-w-md text-muted">Busana di foto adalah set yang disewakan. {rate}.</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/catalog" className="bg-ink px-5 py-3 text-sm text-cream">Buka katalog</Link>
             <a href="https://wa.me/6285771244199" className="border border-ink px-5 py-3 text-sm">Tanya tanggal</a>
@@ -30,7 +30,7 @@ export function Home() {
             <Link key={item.src} to={`/catalog/c${String(costumes.findIndex((c) => c.src === item.src) + 1).padStart(2, "0")}`} className="group">
               <img src={item.src} alt={item.name} className="h-auto w-full" />
               <p className="mt-3 font-display text-xl group-hover:text-rose">{item.name}</p>
-              <p className="text-sm text-muted">{rate} / acara</p>
+              <p className="text-sm text-muted">{rate}</p>
             </Link>
           ))}
         </div>
