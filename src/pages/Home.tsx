@@ -19,20 +19,10 @@ export function Home() {
           <figcaption className="mt-2 text-right text-xs text-muted">Panggung · kostum ungu emas</figcaption>
         </figure>
       </section>
-      <section className="border-y border-rose/30">
-        <dl className="mx-auto grid max-w-6xl md:grid-cols-3">
-          {[["01", "Koleksi", "Dua puluh lima set, dari solo sampai grup."], ["02", "Perawatan", "Dicek setelah setiap pengembalian."], ["03", "Jadwal", "Satu set tidak diedarkan dua kali di hari yang sama."]].map(([n, t, d]) => (
-            <div key={n} className="border-rose/30 px-6 py-6 md:border-l first:md:border-l-0">
-              <dt className="text-xs tracking-widest text-rose">{n}</dt>
-              <dd className="mt-2 font-display text-2xl">{t}</dd>
-              <dd className="mt-1 text-sm text-muted">{d}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
+
       <section className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex items-end justify-between gap-4">
-          <h2 className="font-display text-4xl">Yang sering keluar</h2>
+          <h2 className="font-display text-4xl">Best Seller</h2>
           <Link to="/catalog" className="text-sm underline decoration-rose underline-offset-4">Semua set</Link>
         </div>
         <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-4">
