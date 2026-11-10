@@ -5,10 +5,7 @@ export function CatalogPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">
       <p className="text-xs uppercase tracking-widest text-rose">Katalog</p>
-      <div className="mt-2 flex flex-wrap items-end justify-between gap-4">
-        <h1 className="font-display text-5xl">Dua puluh lima set</h1>
-        <p className="max-w-xs text-sm text-muted">Tarif {rate} per acara. Ukuran disesuaikan per penari.</p>
-      </div>
+      <p className="mt-2 max-w-xs text-sm text-muted">Tarif {rate} per acara. Ukuran disesuaikan per penari.</p>
       <div className="mt-10 grid grid-cols-2 items-start gap-x-5 gap-y-10 md:grid-cols-3">
         {costumes.map((item, index) => (
           <Link key={item.src} to={`/catalog/c${String(index + 1).padStart(2, "0")}`} className="row-span-4 grid grid-rows-subgrid gap-y-1">
