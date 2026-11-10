@@ -42,7 +42,12 @@ export const costumes = [
   { src: "/imagine_images/catalog/c33.jpg", name: "Merah Putih", note: "Selendang putih, celana coklat." },
 ] as const;
 
-export const featured = [costumes[0], costumes[6], costumes[15], costumes[22]];
+export const featured = [
+  { src: "/imagine_images/featured/f01.jpg", name: "Hijau Putih", note: "Grup, atasan hijau emas, rok putih." },
+  { src: "/imagine_images/featured/f02.jpg", name: "Ungu Biru", note: "Kebaya ungu, rok biru, selendang putih." },
+  { src: "/imagine_images/featured/f03.jpg", name: "Turquoise Magenta", note: "Duo, celana lebar magenta." },
+  { src: "/imagine_images/featured/f04.jpg", name: "Orange Hijau", note: "Grup, kebaya orange, selendang hijau." },
+];
 
 export type GalleryTag = "panggung" | "tradisi" | "potret" | "budaya";
 
