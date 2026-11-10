@@ -14,16 +14,7 @@ export function GalleryPage() {
       </p>
       <div className="mt-8 flex gap-5 overflow-x-auto border-b border-rose/30">
         {galleryFilters.map((filter) => (
-          <button
-            key={filter.id}
-            type="button"
-            onClick={() => setTag(filter.id)}
-            className={
-              tag === filter.id
-                ? "shrink-0 border-b-2 border-ink pb-3 text-sm text-ink"
-                : "shrink-0 border-b-2 border-transparent pb-3 text-sm text-muted"
-            }
-          >
+          <button key={filter.id} type="button" onClick={() => setTag(filter.id)} className={tag === filter.id ? "shrink-0 border-b-2 border-ink pb-3 text-sm text-ink" : "shrink-0 border-b-2 border-transparent pb-3 text-sm text-muted"}>
             {filter.label}
           </button>
         ))}
@@ -31,7 +22,7 @@ export function GalleryPage() {
       <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3">
         {items.map((item) => (
           <figure key={item.src} className="bg-paper">
-            <img src={item.src} alt={item.alt} className="aspect-[3/4] w-full object-cover object-top" />
+            <img src={item.src} alt={item.alt} className="h-auto w-full" />
           </figure>
         ))}
       </div>

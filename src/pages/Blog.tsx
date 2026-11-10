@@ -8,7 +8,7 @@ export function BlogPage() {
       <p className="text-xs uppercase tracking-widest text-rose">Tulisan</p>
       <h1 className="mt-2 font-display text-5xl">Catatan dari studio</h1>
       <Link to={`/blog/${lead.slug}`} className="mt-10 grid items-center gap-6 md:grid-cols-2">
-        <img src={lead.image} alt="" className="aspect-[4/3] w-full object-cover object-top" />
+        <img src={lead.image} alt="" className="h-auto w-full" />
         <div>
           <p className="text-xs text-rose">{lead.date}</p>
           <h2 className="mt-2 font-display text-4xl">{lead.title}</h2>

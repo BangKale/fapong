@@ -12,7 +12,7 @@ export function CatalogPage() {
       <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3">
         {costumes.map((item, index) => (
           <article key={item.src}>
-            <img src={item.src} alt={item.name} className="aspect-[3/4] w-full object-cover object-top" />
+            <img src={item.src} alt={item.name} className="h-auto w-full" />
             <p className="mt-3 text-xs text-rose">{String(index + 1).padStart(2, "0")}</p>
             <h2 className="font-display text-2xl leading-tight">{item.name}</h2>
             <p className="text-sm text-muted">{item.note}</p>

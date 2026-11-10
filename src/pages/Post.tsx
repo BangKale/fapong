@@ -14,12 +14,10 @@ export function PostPage() {
   }
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
-      <Link to="/blog" className="text-sm text-muted underline decoration-rose underline-offset-4">
-        Semua tulisan
-      </Link>
+      <Link to="/blog" className="text-sm text-muted underline decoration-rose underline-offset-4">Semua tulisan</Link>
       <p className="mt-6 text-xs text-rose">{post.date}</p>
       <h1 className="mt-2 font-display text-5xl">{post.title}</h1>
-      <img src={post.image} alt="" className="mt-8 aspect-[16/9] w-full object-cover object-top" />
+      <img src={post.image} alt="" className="mt-8 h-auto w-full" />
       <div className="mt-8 space-y-4 text-base">
         {post.body.map((paragraph) => (
           <p key={paragraph}>{paragraph}</p>
