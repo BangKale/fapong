@@ -6,16 +6,12 @@ export function Home() {
     <main>
       <section className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-12 md:flex-row md:py-16">
         <div className="w-full md:w-5/12 md:translate-y-32">
-          <p className="text-xs uppercase tracking-widest text-rose">Bandung · sewa per acara</p>
-          <h1 className="mt-4 font-display text-5xl leading-tight md:text-6xl">
-            Kostum Jaipong yang siap naik panggung.
-          </h1>
-          <p className="mt-5 max-w-sm text-muted">
-            Busana di foto adalah set yang disewakan. Tarif mulai {rate} per acara, termasuk cek ukuran.
-          </p>
+          <p className="text-xs uppercase tracking-widest text-rose">Karawang · sewa per acara</p>
+          <h1 className="mt-4 font-display text-5xl leading-tight md:text-6xl">Kostum Jaipong yang siap naik panggung.</h1>
+          <p className="mt-5 max-w-sm text-muted">Busana di foto adalah set yang disewakan. Tarif mulai {rate} per acara, termasuk cek ukuran.</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/catalog" className="bg-ink px-5 py-3 text-sm text-cream">Buka katalog</Link>
-            <a href="https://wa.me/6281234567890" className="border border-ink px-5 py-3 text-sm">Tanya tanggal</a>
+            <a href="https://wa.me/6285771244199" className="border border-ink px-5 py-3 text-sm">Tanya tanggal</a>
           </div>
         </div>
         <figure className="w-full md:w-7/12">
@@ -25,7 +21,7 @@ export function Home() {
       </section>
       <section className="border-y border-rose/30">
         <dl className="mx-auto grid max-w-6xl md:grid-cols-3">
-          {[["01", "Koleksi", "Dua puluh lima set, dari solo sampai grup."],["02", "Perawatan", "Dicek setelah setiap pengembalian."],["03", "Jadwal", "Satu set tidak diedarkan dua kali di hari yang sama."]].map(([n, t, d]) => (
+          {[["01", "Koleksi", "Dua puluh lima set, dari solo sampai grup."], ["02", "Perawatan", "Dicek setelah setiap pengembalian."], ["03", "Jadwal", "Satu set tidak diedarkan dua kali di hari yang sama."]].map(([n, t, d]) => (
             <div key={n} className="border-rose/30 px-6 py-6 md:border-l first:md:border-l-0">
               <dt className="text-xs tracking-widest text-rose">{n}</dt>
               <dd className="mt-2 font-display text-2xl">{t}</dd>
@@ -54,7 +50,7 @@ export function Home() {
         <div>
           <p className="text-xs uppercase tracking-widest text-rose">Studio</p>
           <h2 className="mt-3 font-display text-4xl">Dirawat supaya masih layak difoto.</h2>
-          <p className="mt-4 text-muted">Fapong.gallery menyewakan kostum Jaipong untuk pentas, hajatan, dan dokumentasi. Kami di Bandung, dan set dikirim sesuai jumlah penari yang Anda sebutkan.</p>
+          <p className="mt-4 text-muted">Fapong.gallery menyewakan kostum Jaipong untuk pentas, hajatan, dan dokumentasi. Kami di Karawang, depan Rumah Beras And 27, dan set dikirim sesuai jumlah penari yang Anda sebutkan.</p>
           <Link to="/about" className="mt-6 inline-block text-sm underline decoration-rose underline-offset-4">Tentang studio</Link>
         </div>
       </section>
@@ -64,8 +60,14 @@ export function Home() {
           <ul className="mt-6 divide-y divide-rose/30 border-y border-rose/30">
             {events.map((event) => (
               <li key={event.title} className="flex items-center gap-6 py-4">
-                <p className="w-14 shrink-0"><span className="block text-xs uppercase tracking-widest text-rose">{event.month}</span><span className="font-display text-3xl leading-none">{event.day}</span></p>
-                <div><p className="font-medium">{event.title}</p><p className="text-sm text-muted">{event.place}</p></div>
+                <p className="w-14 shrink-0">
+                  <span className="block text-xs uppercase tracking-widest text-rose">{event.month}</span>
+                  <span className="font-display text-3xl leading-none">{event.day}</span>
+                </p>
+                <div>
+                  <p className="font-medium">{event.title}</p>
+                  <p className="text-sm text-muted">{event.place}</p>
+                </div>
               </li>
             ))}
           </ul>
