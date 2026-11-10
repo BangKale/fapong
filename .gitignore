@@ -1,0 +1,4 @@
+node_modules
+dist
+public/imagine_images
+.DS_Store

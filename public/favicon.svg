@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Fapong.gallery">
+  <rect width="64" height="64" rx="14" fill="#FDF8F6"/>
+  <circle cx="32" cy="32" r="26" fill="#C48B8B"/>
+  <g fill="#3D2C2C" stroke="#3D2C2C" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M30 25.5C22 18 15 15.5 13 17.5" fill="none" stroke-width="4.6"/>
+    <path d="M34 25.5C43 16 51 13 53 15.5" fill="none" stroke-width="4.6"/>
+    <circle cx="32" cy="17.5" r="4.3" stroke="none"/>
+    <path d="M27.2 23.2h9.6l2.2 8.2 9.4 18.2H15.6l9.4-18.2z" stroke="none"/>
+  </g>
+</svg>
