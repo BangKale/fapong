@@ -47,7 +47,7 @@ export function Footer() {
         </div>
         <div className="text-sm">
           <p className="text-muted">Studio</p>
-          <p className="mt-2">Depan Rumah Beras And 27</p>
+          <p className="mt-2">Depan Rumah Beras</p>
           <p>Karawang Kulon, Karawang Barat</p>
           <a className="mt-2 inline-block underline decoration-rose underline-offset-4" href="https://www.instagram.com/fapong.gallery/">Instagram</a>
           <a className="mt-2 block underline decoration-rose underline-offset-4" href="https://wa.me/6285771244199">WhatsApp</a>

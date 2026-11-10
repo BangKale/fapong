@@ -13,12 +13,8 @@ export function AboutPage() {
         <div className="w-full md:w-1/2 md:translate-y-12">
           <p className="text-xs uppercase tracking-widest text-rose">Tentang</p>
           <h1 className="mt-2 font-display text-5xl leading-tight">Studio sewa, bukan etalase.</h1>
-          <p className="mt-4 text-muted">
-            Fapong.gallery ada supaya kostum Jaipong tetap naik panggung: hajatan, sekolah, dan pentas kota. Kami berbasis di Karawang, depan Rumah Beras And 27.
-          </p>
-          <p className="mt-4 text-muted">
-            Foto di situs ini diambil dari set yang sama. Kalau sebuah busana sedang dijahit, kami tidak menawarkannya untuk tanggal itu.
-          </p>
+          <p className="mt-4 text-muted">Fapong.gallery ada supaya kostum Jaipong tetap naik panggung: hajatan, sekolah, dan pentas kota. Kami berbasis di Karawang, depan Rumah Beras.</p>
+          <p className="mt-4 text-muted">Foto di situs ini diambil dari set yang sama. Kalau sebuah busana sedang dijahit, kami tidak menawarkannya untuk tanggal itu.</p>
         </div>
         <img src="/imagine_images/catalog/c12.jpg" alt="Grup kostum hijau putih" className="ml-auto block h-auto max-h-[72vh] w-auto max-w-full md:w-1/2" />
       </section>

@@ -19,28 +19,20 @@ export function ContactPage() {
           <div>
             <dt className="text-muted">WhatsApp</dt>
             <dd>
-              <a className="underline decoration-rose underline-offset-4" href="https://wa.me/6285771244199">
-                +62 857-7124-4199
-              </a>
+              <a className="underline decoration-rose underline-offset-4" href="https://wa.me/6285771244199">+62 857-7124-4199</a>
             </dd>
           </div>
           <div>
             <dt className="text-muted">Instagram</dt>
             <dd>
-              <a className="underline decoration-rose underline-offset-4" href="https://www.instagram.com/fapong.gallery/">
-                @fapong.gallery
-              </a>
+              <a className="underline decoration-rose underline-offset-4" href="https://www.instagram.com/fapong.gallery/">@fapong.gallery</a>
             </dd>
           </div>
           <div>
             <dt className="text-muted">Lokasi</dt>
             <dd>
-              <a className="underline decoration-rose underline-offset-4" href="https://www.google.com/maps/place/Rumah+Beras+And+27/@-6.3128246,107.2911568,17z">
-                Depan Rumah Beras And 27
-              </a>
-              <span className="mt-1 block text-muted">
-                Jalan Bunut Kertayasa, Karawang Kulon, Karawang Barat, Jawa Barat 41311
-              </span>
+              <a className="underline decoration-rose underline-offset-4" href="https://www.google.com/maps/place/Rumah+Beras+And+27/@-6.3128246,107.2911568,17z">Depan Rumah Beras</a>
+              <span className="mt-1 block text-muted">Jalan Bunut Kertayasa, Karawang Kulon, Karawang Barat, Jawa Barat 41311</span>
             </dd>
           </div>
         </dl>

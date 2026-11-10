@@ -50,7 +50,7 @@ export function Home() {
         <div>
           <p className="text-xs uppercase tracking-widest text-rose">Studio</p>
           <h2 className="mt-3 font-display text-4xl">Dirawat supaya masih layak difoto.</h2>
-          <p className="mt-4 text-muted">Fapong.gallery menyewakan kostum Jaipong untuk pentas, hajatan, dan dokumentasi. Kami di Karawang, depan Rumah Beras And 27, dan set dikirim sesuai jumlah penari yang Anda sebutkan.</p>
+          <p className="mt-4 text-muted">Fapong.gallery menyewakan kostum Jaipong untuk pentas, hajatan, dan dokumentasi. Kami di Karawang, depan Rumah Beras, dan set dikirim sesuai jumlah penari yang Anda sebutkan.</p>
           <Link to="/about" className="mt-6 inline-block text-sm underline decoration-rose underline-offset-4">Tentang studio</Link>
         </div>
       </section>
