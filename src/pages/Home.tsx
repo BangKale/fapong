@@ -5,7 +5,7 @@ export function Home() {
   return (
     <main>
       <section className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-12 md:flex-row md:py-16">
-        <div className="w-full md:w-5/12 md:translate-y-32">
+        <div className="w-full md:w-5/12">
           <p className="text-xs uppercase tracking-widest text-rose">Karawang · sewa per acara</p>
           <h1 className="mt-4 font-display text-5xl leading-tight md:text-6xl">Kostum Jaipong yang siap naik panggung.</h1>
           <p className="mt-5 max-w-sm text-muted">Busana di foto adalah set yang disewakan. Tarif mulai {rate} per acara, termasuk cek ukuran.</p>
