@@ -5,7 +5,7 @@ export function Home() {
   return (
     <main>
       <section className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-12 md:flex-row md:py-16">
-        <div className="w-full md:w-5/12">
+        <div className="w-full md:w-5/12 md:translate-y-32">
           <p className="text-xs uppercase tracking-widest text-rose">Bandung · sewa per acara</p>
           <h1 className="mt-4 font-display text-5xl leading-tight md:text-6xl">
             Kostum Jaipong yang siap naik panggung.
@@ -14,30 +14,18 @@ export function Home() {
             Busana di foto adalah set yang disewakan. Tarif mulai {rate} per acara, termasuk cek ukuran.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/catalog" className="bg-ink px-5 py-3 text-sm text-cream">
-              Buka katalog
-            </Link>
-            <a href="https://wa.me/6281234567890" className="border border-ink px-5 py-3 text-sm">
-              Tanya tanggal
-            </a>
+            <Link to="/catalog" className="bg-ink px-5 py-3 text-sm text-cream">Buka katalog</Link>
+            <a href="https://wa.me/6281234567890" className="border border-ink px-5 py-3 text-sm">Tanya tanggal</a>
           </div>
         </div>
         <figure className="w-full md:w-7/12">
-          <img
-            src="/imagine_images/hero_stage.jpg"
-            alt="Penari Jaipong di panggung"
-            className="ml-auto block h-auto max-h-[72vh] w-auto max-w-full"
-          />
+          <img src="/imagine_images/hero_stage.jpg" alt="Penari Jaipong di panggung" className="ml-auto block h-auto max-h-[72vh] w-auto max-w-full" />
           <figcaption className="mt-2 text-right text-xs text-muted">Panggung · kostum ungu emas</figcaption>
         </figure>
       </section>
       <section className="border-y border-rose/30">
         <dl className="mx-auto grid max-w-6xl md:grid-cols-3">
-          {[
-            ["01", "Koleksi", "Dua puluh lima set, dari solo sampai grup."],
-            ["02", "Perawatan", "Dicek setelah setiap pengembalian."],
-            ["03", "Jadwal", "Satu set tidak diedarkan dua kali di hari yang sama."],
-          ].map(([n, t, d]) => (
+          {[["01", "Koleksi", "Dua puluh lima set, dari solo sampai grup."],["02", "Perawatan", "Dicek setelah setiap pengembalian."],["03", "Jadwal", "Satu set tidak diedarkan dua kali di hari yang sama."]].map(([n, t, d]) => (
             <div key={n} className="border-rose/30 px-6 py-6 md:border-l first:md:border-l-0">
               <dt className="text-xs tracking-widest text-rose">{n}</dt>
               <dd className="mt-2 font-display text-2xl">{t}</dd>
@@ -76,14 +64,8 @@ export function Home() {
           <ul className="mt-6 divide-y divide-rose/30 border-y border-rose/30">
             {events.map((event) => (
               <li key={event.title} className="flex items-center gap-6 py-4">
-                <p className="w-14 shrink-0">
-                  <span className="block text-xs uppercase tracking-widest text-rose">{event.month}</span>
-                  <span className="font-display text-3xl leading-none">{event.day}</span>
-                </p>
-                <div>
-                  <p className="font-medium">{event.title}</p>
-                  <p className="text-sm text-muted">{event.place}</p>
-                </div>
+                <p className="w-14 shrink-0"><span className="block text-xs uppercase tracking-widest text-rose">{event.month}</span><span className="font-display text-3xl leading-none">{event.day}</span></p>
+                <div><p className="font-medium">{event.title}</p><p className="text-sm text-muted">{event.place}</p></div>
               </li>
             ))}
           </ul>
