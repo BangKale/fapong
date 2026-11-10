@@ -9,12 +9,16 @@ const points = [
 export function AboutPage() {
   return (
     <main>
-      <section className="mx-auto grid max-w-6xl items-end gap-10 px-6 py-12 md:grid-cols-2">
-        <div>
+      <section className="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 md:grid-cols-2">
+        <div className="md:pt-2">
           <p className="text-xs uppercase tracking-widest text-rose">Tentang</p>
           <h1 className="mt-2 font-display text-5xl">Studio sewa, bukan etalase.</h1>
-          <p className="mt-4 text-muted">Fapong.gallery ada supaya kostum Jaipong tetap naik panggung: hajatan, sekolah, dan pentas kota. Kami berbasis di Bandung.</p>
-          <p className="mt-4 text-muted">Foto di situs ini diambil dari set yang sama. Kalau sebuah busana sedang dijahit, kami tidak menawarkannya untuk tanggal itu.</p>
+          <p className="mt-4 text-muted">
+            Fapong.gallery ada supaya kostum Jaipong tetap naik panggung: hajatan, sekolah, dan pentas kota. Kami berbasis di Bandung.
+          </p>
+          <p className="mt-4 text-muted">
+            Foto di situs ini diambil dari set yang sama. Kalau sebuah busana sedang dijahit, kami tidak menawarkannya untuk tanggal itu.
+          </p>
         </div>
         <img src="/imagine_images/catalog/c12.jpg" alt="Grup kostum hijau putih" className="h-auto w-full" />
       </section>
@@ -30,7 +34,9 @@ export function AboutPage() {
         </ol>
       </section>
       <p className="mx-auto max-w-6xl px-6 py-12 text-sm">
-        <Link to="/contact" className="underline decoration-rose underline-offset-4">Hubungi studio</Link>
+        <Link to="/contact" className="underline decoration-rose underline-offset-4">
+          Hubungi studio
+        </Link>
       </p>
     </main>
   );
