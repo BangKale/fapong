@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Fapong.gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="index.html" class="logo">
+<<<<<<< HEAD
+        <img src="imagine_images/logo.jpg" alt="Fapong Logo">
+        Fapong.gallery
+      </a>
+      <nav>
+                        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="catalog.html">Catalog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+=======
+        <img src="imagine_images/logo.png" alt="Fapong Logo">
+        Fapong.gallery
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="events.html">Events</a></li>
+>>>>>>> 71a0471 (Initial commit)
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="search-btn">🔍</button>
+<<<<<<< HEAD
+        <a href="gallery.html" class="book-btn">📞 Book Now</a>
+=======
+        <a href="gallery.html" class="explore-btn">Explore →</a>
+>>>>>>> 71a0471 (Initial commit)
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-header">
+      <div class="eyebrow">GALLERY</div>
+      <h1>Our Gallery</h1>
+      <p>Explore the elegance and beauty of Jaipong dance through our collection.</p>
+    </section>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="performance">Performance</button>
+      <button class="filter-btn" data-filter="traditional">Traditional</button>
+      <button class="filter-btn" data-filter="portrait">Portrait</button>
+      <button class="filter-btn" data-filter="culture">Culture</button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" data-category="performance">
+<<<<<<< HEAD
+        <img src="imagine_images/group_stage.jpg" alt="Group Stage Performance">
+      </div>
+      <div class="gallery-item" data-category="performance">
+        <img src="imagine_images/0jq2I.jpg" alt="Group Performance">
+      </div>
+      <div class="gallery-item" data-category="traditional">
+        <img src="imagine_images/fuxj5.jpg" alt="Costume Details">
+=======
+        <img src="imagine_images/IMG-20261019-WA0035.jpg" alt="Group Performance">
+      </div>
+      <div class="gallery-item" data-category="traditional">
+        <img src="imagine_images/IMG-20261107-WA0028.jpg" alt="Costume Details">
+>>>>>>> 71a0471 (Initial commit)
+      </div>
+      <div class="gallery-item" data-category="portrait">
+        <img src="imagine_images/Gu5L8.jpg" alt="Dancer Portrait">
+      </div>
+      <div class="gallery-item" data-category="culture">
+        <img src="imagine_images/mBgfK.jpg" alt="Hand Details">
+      </div>
+      <div class="gallery-item" data-category="performance">
+        <img src="imagine_images/CXmTk.jpg" alt="Silhouette Performance">
+      </div>
+      <div class="gallery-item" data-category="traditional">
+        <img src="imagine_images/H6rAS.jpg" alt="Outdoor Group">
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Fapong.gallery. Celebrating the beauty of Jaipong dance.</p>
+    </div>
+  </footer>
+
+  <script>
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.gallery-item');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        items.forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
