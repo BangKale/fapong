@@ -4,8 +4,8 @@ import { events, featured, rate } from "@/data/content";
 export function Home() {
   return (
     <main>
-      <section className="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 md:grid-cols-12 md:py-16">
-        <div className="md:col-span-5 md:pt-2">
+      <section className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-12 md:flex-row md:py-16">
+        <div className="w-full md:w-5/12">
           <p className="text-xs uppercase tracking-widest text-rose">Bandung · sewa per acara</p>
           <h1 className="mt-4 font-display text-5xl leading-tight md:text-6xl">
             Kostum Jaipong yang siap naik panggung.
@@ -22,9 +22,13 @@ export function Home() {
             </a>
           </div>
         </div>
-        <figure className="md:col-span-7">
-          <img src="/imagine_images/hero_stage.jpg" alt="Penari Jaipong di panggung" className="h-auto w-full" />
-          <figcaption className="mt-2 text-xs text-muted">Panggung · kostum ungu emas</figcaption>
+        <figure className="w-full md:w-7/12">
+          <img
+            src="/imagine_images/hero_stage.jpg"
+            alt="Penari Jaipong di panggung"
+            className="ml-auto block h-auto max-h-[72vh] w-auto max-w-full"
+          />
+          <figcaption className="mt-2 text-right text-xs text-muted">Panggung · kostum ungu emas</figcaption>
         </figure>
       </section>
       <section className="border-y border-rose/30">

@@ -9,10 +9,10 @@ const points = [
 export function AboutPage() {
   return (
     <main>
-      <section className="mx-auto grid max-w-6xl items-start gap-10 px-6 py-12 md:grid-cols-2">
-        <div className="md:pt-2">
+      <section className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-12 md:flex-row">
+        <div className="w-full md:w-1/2">
           <p className="text-xs uppercase tracking-widest text-rose">Tentang</p>
-          <h1 className="mt-2 font-display text-5xl">Studio sewa, bukan etalase.</h1>
+          <h1 className="mt-2 font-display text-5xl leading-tight">Studio sewa, bukan etalase.</h1>
           <p className="mt-4 text-muted">
             Fapong.gallery ada supaya kostum Jaipong tetap naik panggung: hajatan, sekolah, dan pentas kota. Kami berbasis di Bandung.
           </p>
@@ -20,7 +20,11 @@ export function AboutPage() {
             Foto di situs ini diambil dari set yang sama. Kalau sebuah busana sedang dijahit, kami tidak menawarkannya untuk tanggal itu.
           </p>
         </div>
-        <img src="/imagine_images/catalog/c12.jpg" alt="Grup kostum hijau putih" className="h-auto w-full" />
+        <img
+          src="/imagine_images/catalog/c12.jpg"
+          alt="Grup kostum hijau putih"
+          className="ml-auto block h-auto max-h-[72vh] w-auto max-w-full md:w-1/2"
+        />
       </section>
       <section className="border-t border-rose/30">
         <ol className="mx-auto grid max-w-6xl md:grid-cols-3">
