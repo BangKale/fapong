@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { costumes, featured, rate } from "@/data/content";
+import { costumes, featured } from "@/data/content";
 
 export function Home() {
   return (
@@ -11,7 +11,7 @@ export function Home() {
             Kostum Jaipong yang siap naik panggung.
           </h1>
           <p className="mt-5 max-w-md text-muted">
-            Busana di foto adalah set yang disewakan. {rate}.
+            Busana di foto adalah set yang disewakan.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/catalog" className="bg-ink px-5 py-3 text-sm text-cream">
@@ -37,10 +37,7 @@ export function Home() {
 
       <section className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex items-end justify-between gap-4">
-          <div>
-            <h2 className="font-display text-4xl">Best Seller</h2>
-            <p className="mt-2 max-w-md text-sm text-muted">{rate}</p>
-          </div>
+          <h2 className="font-display text-4xl">Best Seller</h2>
           <Link to="/catalog" className="text-sm underline decoration-rose underline-offset-4">
             Semua set
           </Link>

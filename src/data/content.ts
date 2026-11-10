@@ -6,8 +6,6 @@ export const nav = [
   { to: "/contact", label: "Kontak" },
 ] as const;
 
-export const rate = "Tarif mulai dari Rp 75,000 - Rp 80,000 / Set";
-
 export const costumes = [
   { src: "/imagine_images/catalog/c01.jpg", name: "Pink Bunga", note: "Grup, hiasan bunga kuning dan merah." },
   { src: "/imagine_images/catalog/c02.jpg", name: "Turquoise Magenta", note: "Duo, celana lebar magenta." },
