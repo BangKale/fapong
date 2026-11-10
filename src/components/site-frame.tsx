@@ -9,30 +9,44 @@ export function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-rose/30 bg-cream/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src="/imagine_images/logo.png" alt="" className="h-10 w-10 rounded-full object-cover" />
-          <span className="font-display text-2xl leading-none tracking-tight">
-            Fapong
-            <span className="text-rose">.</span>
-            <span className="text-base font-sans font-normal text-muted">gallery</span>
-          </span>
+        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <img src="/logo.svg" alt="Fapong Gallery" className="h-16 w-16 object-contain sm:h-20 sm:w-20" />
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {nav.map((item) => (
-            <NavLink key={item.to} to={item.to} end={item.to === "/"} className={({ isActive }) => (isActive ? "text-sm text-ink" : "text-sm text-muted")}>
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === "/"}
+              className={({ isActive }) => (isActive ? "text-sm text-ink" : "text-sm text-muted")}
+            >
               {item.label}
             </NavLink>
           ))}
         </nav>
-        <Link to="/contact" className="hidden bg-ink px-4 py-2 text-sm text-cream md:inline-flex">Sewa kostum</Link>
-        <button type="button" className="inline-flex h-11 w-11 items-center justify-center md:hidden" aria-expanded={open} aria-label={open ? "Tutup menu" : "Buka menu"} onClick={() => setOpen((v) => !v)}>
+        <Link to="/contact" className="hidden bg-ink px-4 py-2 text-sm text-cream md:inline-flex">
+          Sewa kostum
+        </Link>
+        <button
+          type="button"
+          className="inline-flex h-11 w-11 items-center justify-center md:hidden"
+          aria-expanded={open}
+          aria-label={open ? "Tutup menu" : "Buka menu"}
+          onClick={() => setOpen((v) => !v)}
+        >
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
       </div>
       {open ? (
         <nav className="border-t border-rose/30 px-6 py-3 md:hidden">
           {nav.map((item) => (
-            <NavLink key={item.to} to={item.to} end={item.to === "/"} className={({ isActive }) => (isActive ? "block py-3 text-base text-ink" : "block py-3 text-base text-muted")} onClick={() => setOpen(false)}>
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === "/"}
+              className={({ isActive }) => (isActive ? "block py-3 text-base text-ink" : "block py-3 text-base text-muted")}
+              onClick={() => setOpen(false)}
+            >
               {item.label}
             </NavLink>
           ))}
