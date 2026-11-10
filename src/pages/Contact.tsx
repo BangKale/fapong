@@ -12,6 +12,19 @@ export function ContactPage() {
 
   return (
     <main className="mx-auto grid max-w-6xl gap-12 px-6 py-12 md:grid-cols-2">
+      <ol className="grid gap-8 border-b border-rose/30 pb-10 md:col-span-2 md:grid-cols-3">
+        {[
+          ["01", "Pilih set", "Buka katalog, lalu catat nomor dan nama kostumnya."],
+          ["02", "Kirim tanggal", "Sebutkan tanggal acara dan jumlah penari lewat WhatsApp."],
+          ["03", "Ambil di studio", "Pengambilan di depan Rumah Beras, Jalan Bunut Kertayasa."],
+        ].map(([n, title, copy]) => (
+          <li key={n}>
+            <p className="text-xs tracking-widest text-rose">{n}</p>
+            <h2 className="mt-2 font-display text-3xl">{title}</h2>
+            <p className="mt-2 text-sm text-muted">{copy}</p>
+          </li>
+        ))}
+      </ol>
       <div>
         <p className="text-xs uppercase tracking-widest text-rose">Kontak</p>
         <h1 className="mt-2 font-display text-5xl">Sebutkan tanggal dan jumlah penari.</h1>
