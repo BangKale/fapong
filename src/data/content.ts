@@ -3,7 +3,6 @@ export const nav = [
   { to: "/gallery", label: "Galeri" },
   { to: "/catalog", label: "Katalog" },
   { to: "/about", label: "Tentang" },
-  { to: "/blog", label: "Tulisan" },
   { to: "/contact", label: "Kontak" },
 ] as const;
 

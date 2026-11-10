@@ -1,13 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import { Footer, Header } from "@/components/site-frame";
 import { AboutPage } from "@/pages/About";
-import { BlogPage } from "@/pages/Blog";
 import { CatalogPage } from "@/pages/Catalog";
 import { CostumePage } from "@/pages/Costume";
 import { ContactPage } from "@/pages/Contact";
 import { GalleryPage } from "@/pages/Gallery";
 import { Home } from "@/pages/Home";
-import { PostPage } from "@/pages/Post";
 
 export function App() {
   return (
@@ -19,8 +17,6 @@ export function App() {
         <Route path="/catalog" element={<CatalogPage />} />
         <Route path="/catalog/:slug" element={<CostumePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:slug" element={<PostPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
