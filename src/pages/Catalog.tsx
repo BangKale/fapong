@@ -9,13 +9,17 @@ export function CatalogPage() {
         <h1 className="font-display text-5xl">Dua puluh lima set</h1>
         <p className="max-w-xs text-sm text-muted">Tarif {rate} per acara. Ukuran disesuaikan per penari.</p>
       </div>
-      <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3">
+      <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-3">
         {costumes.map((item, index) => (
-          <article key={item.src}>
-            <img src={item.src} alt={item.name} className="h-auto w-full" />
-            <p className="mt-3 text-xs text-rose">{String(index + 1).padStart(2, "0")}</p>
-            <h2 className="font-display text-2xl leading-tight">{item.name}</h2>
-            <p className="text-sm text-muted">{item.note}</p>
+          <article key={item.src} className="flex flex-col border border-rose/25 bg-paper">
+            <div className="relative aspect-square w-full shrink-0 overflow-hidden bg-cream">
+              <img src={item.src} alt={item.name} className="absolute inset-0 h-full w-full object-contain p-3" />
+            </div>
+            <div className="flex flex-1 flex-col border-t border-rose/20 px-4 py-4">
+              <p className="text-xs tracking-widest text-rose">{String(index + 1).padStart(2, "0")}</p>
+              <h2 className="mt-1 font-display text-2xl leading-tight">{item.name}</h2>
+              <p className="mt-1 text-sm text-muted">{item.note}</p>
+            </div>
           </article>
         ))}
       </div>
