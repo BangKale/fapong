@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 const points = [
-  ["Simpan yang masih dipakai", "Set di katalog adalah busana yang beredar, bukan konsep."],
-  ["Teruskan ke penari muda", "Lokakarya di studio terbuka untuk sekolah dan sanggar."],
-  ["Jawa Barat, dijelaskan pelan", "Kami ceritakan busananya seadanya, tanpa mengada-ada sejarah."],
+  ["Sejak 2021", "Fapong.gallery merawat kostum Jaipong agar tetap layak naik panggung."],
+  ["Satu foto, satu set", "Gambar di katalog adalah busana yang sama dengan yang disewakan."],
+  ["Karawang", "Studio berada di depan Rumah Beras. Jadwal diatur lewat WhatsApp."],
 ];
 
 export function AboutPage() {
@@ -11,12 +11,20 @@ export function AboutPage() {
     <main>
       <section className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-12 md:flex-row">
         <div className="w-full md:w-1/2 md:translate-y-12">
-          <p className="text-xs uppercase tracking-widest text-rose">Tentang</p>
-          <h1 className="mt-2 font-display text-5xl leading-tight">Studio sewa, bukan etalase.</h1>
-          <p className="mt-4 text-muted">Fapong.gallery ada supaya kostum Jaipong tetap naik panggung: hajatan, sekolah, dan pentas kota. Kami berbasis di Karawang, depan Rumah Beras.</p>
-          <p className="mt-4 text-muted">Foto di situs ini diambil dari set yang sama. Kalau sebuah busana sedang dijahit, kami tidak menawarkannya untuk tanggal itu.</p>
+          <p className="text-xs uppercase tracking-widest text-rose">Fapong.gallery · 2021</p>
+          <h1 className="mt-2 font-display text-5xl leading-tight">Kostum Jaipong untuk panggung.</h1>
+          <p className="mt-4 text-muted">
+            Fapong.gallery berdiri pada tahun 2021 di Karawang. Kami menyewakan kostum Jaipong untuk hajatan, sekolah, dan pentas.
+          </p>
+          <p className="mt-4 text-muted">
+            Nama ini dipakai sejak awal sebagai studio sewa, bukan toko. Set yang sedang diperbaiki tidak kami tawarkan untuk tanggal yang sama.
+          </p>
         </div>
-        <img src="/imagine_images/catalog/c12.jpg" alt="Grup kostum hijau putih" className="ml-auto block h-auto max-h-[72vh] w-auto max-w-full md:w-1/2" />
+        <img
+          src="/imagine_images/catalog/c12.jpg"
+          alt="Grup kostum hijau putih"
+          className="ml-auto block h-auto max-h-[72vh] w-auto max-w-full md:w-1/2"
+        />
       </section>
       <section className="border-t border-rose/30">
         <ol className="mx-auto grid max-w-6xl md:grid-cols-3">
@@ -30,7 +38,9 @@ export function AboutPage() {
         </ol>
       </section>
       <p className="mx-auto max-w-6xl px-6 py-12 text-sm">
-        <Link to="/contact" className="underline decoration-rose underline-offset-4">Hubungi studio</Link>
+        <Link to="/contact" className="underline decoration-rose underline-offset-4">
+          Hubungi Fapong.gallery
+        </Link>
       </p>
     </main>
   );
