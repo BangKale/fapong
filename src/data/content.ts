@@ -34,6 +34,14 @@ export const costumes = [
   { src: "/imagine_images/catalog/c23.jpg", name: "Merah Emas", note: "Rompi merah emas, celana hitam." },
   { src: "/imagine_images/catalog/c24.jpg", name: "Orange Hijau", note: "Kebaya orange, selendang hijau." },
   { src: "/imagine_images/catalog/c25.jpg", name: "Merah Kuning", note: "Celana kuning, rompi merah." },
+  { src: "/imagine_images/catalog/c26.jpg", name: "Hijau Selendang", note: "Solo, selendang merah, rok hijau dan kuning." },
+  { src: "/imagine_images/catalog/c27.jpg", name: "Hijau Emas", note: "Kebaya hijau, kain emas, celana hijau." },
+  { src: "/imagine_images/catalog/c28.jpg", name: "Merah Batik", note: "Atasan merah, panel batik hitam." },
+  { src: "/imagine_images/catalog/c29.jpg", name: "Ungu Pink", note: "Selendang kuning, kain pink." },
+  { src: "/imagine_images/catalog/c30.jpg", name: "Putih Orange", note: "Kebaya putih, celana orange bermotif." },
+  { src: "/imagine_images/catalog/c31.jpg", name: "Merah Biru", note: "Mahkota emas, kain merah dan biru." },
+  { src: "/imagine_images/catalog/c32.jpg", name: "Putih Kuning", note: "Atasan putih emas, celana kuning." },
+  { src: "/imagine_images/catalog/c33.jpg", name: "Merah Putih", note: "Selendang putih, celana coklat." },
 ] as const;
 
 export const featured = [costumes[0], costumes[6], costumes[15], costumes[22]];
