@@ -20,11 +20,16 @@ export function AboutPage() {
             Nama ini dipakai sejak awal sebagai studio sewa, bukan toko. Set yang sedang diperbaiki tidak kami tawarkan untuk tanggal yang sama.
           </p>
         </div>
-        <img
-          src="/imagine_images/catalog/c12.jpg"
-          alt="Grup kostum hijau putih"
-          className="ml-auto block h-auto max-h-[72vh] w-auto max-w-full md:w-1/2"
-        />
+        <div className="flex w-full justify-end md:w-1/2">
+          <div className="relative w-fit max-w-full">
+            <img
+              src="/imagine_images/catalog/c12.jpg"
+              alt="Grup kostum hijau putih"
+              className="block h-auto max-h-[72vh] w-auto max-w-full object-contain"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#fffdfb] from-0% via-[#fdf8f6]/95 via-[28%] to-transparent to-[58%]" />
+          </div>
+        </div>
       </section>
       <section className="border-t border-rose/30">
         <ol className="mx-auto grid max-w-6xl md:grid-cols-3">
