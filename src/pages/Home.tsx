@@ -27,14 +27,11 @@ export function Home() {
           </div>
         </div>
         <figure className="w-full md:w-7/12">
-          <div className="relative ml-auto w-fit max-w-full">
-            <img
-              src={hero}
-              alt="Penari Jaipong di panggung"
-              className="block h-auto max-h-[72vh] w-auto max-w-full"
-            />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#fffdfb] from-0% via-[#fdf8f6]/95 via-[28%] to-transparent to-[58%]" />
-          </div>
+          <img
+            src={hero}
+            alt="Penari Jaipong di panggung"
+            className="ml-auto block h-auto max-h-[72vh] w-auto max-w-full object-contain"
+          />
         </figure>
       </section>
 
