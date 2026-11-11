@@ -8,7 +8,7 @@ const points = [
 
 export function AboutPage() {
   return (
-    <main id="main-content">
+    <main>
       <section className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-12 md:flex-row">
         <div className="w-full md:w-1/2 md:translate-y-12">
           <p className="text-xs uppercase tracking-widest text-rose">Fapong.gallery · 2021</p>

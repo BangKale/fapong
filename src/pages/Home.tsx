@@ -1,57 +1,73 @@
-import { ArrowDown, ArrowRight, ArrowUpRight, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import { CostumeCard } from "@/components/costume-card";
 import { useSite } from "@/data/site";
-
-const steps = [
-  ["01", "Temukan pesonamu", "Jelajahi katalog dan pilih kostum yang sesuai dengan penampilanmu."],
-  ["02", "Ceritakan rencanamu", "Kirim nomor set, tanggal acara, dan jumlah penari melalui WhatsApp. Konfirmasikan ukuran serta ketersediaannya."],
-  ["03", "Bersiap naik panggung", "Atur jadwal pengambilan kostum bersama kami di studio Fapong Gallery, Karawang."],
-];
 
 export function Home() {
   const { costumes, featured, hero } = useSite();
   return (
-    <main id="main-content">
-      <section className="gallery-hero">
-        <img src={hero} alt="" fetchPriority="high" className="gallery-hero-photo" />
-        <div className="gallery-hero-shade" />
-        <div className="site-width gallery-hero-content">
-          <div data-reveal className="max-w-2xl">
-            <p className="eyebrow text-[#ead8ba]">Fapong Gallery / Karawang</p>
-            <h1 className="hero-title">Setiap gerak,<br />sebuah <em>pesona.</em></h1>
-            <p className="mt-6 max-w-sm text-sm leading-7 text-white/80 sm:text-base">Sewa kostum Jaipong untuk momen yang layak dikenang. Dari panggung tunggal hingga harmoni rampak.</p>
-            <Link to="/catalog" className="button-light mt-8">Jelajahi koleksi <ArrowUpRight size={18} /></Link>
+    <main>
+      <section className="relative isolate overflow-hidden bg-ink text-cream">
+        <img
+          src={hero}
+          alt=""
+          fetchPriority="high"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[center_30%] md:object-[center_15%]"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/90 via-black/50 to-black/15 md:bg-gradient-to-r md:from-black/85 md:via-black/50 md:to-black/10" />
+        <div className="mx-auto flex min-h-[740px] max-w-6xl items-end px-6 py-12 md:min-h-[680px] md:items-center md:py-20">
+          <div data-reveal className="w-full max-w-xl">
+            <p className="text-xs uppercase tracking-widest text-cream/85">Sewa kostum Jaipong · Karawang</p>
+            <h1 className="mt-4 font-display text-5xl leading-tight md:text-6xl">
+              Pesona Tradisi, Gemilang di Atas Panggung.
+            </h1>
+            <p className="mt-5 max-w-lg text-cream/90">
+              Hadirkan keindahan seni dan budaya melalui koleksi kostum pilihan dari Fapong Gallery. Temukan busana terbaik untuk setiap pertunjukan dan momen istimewa.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link to="/catalog" className="bg-cream px-5 py-3 text-sm text-ink hover:bg-white">
+                Buka katalog
+              </Link>
+            </div>
           </div>
-          <div className="hero-bottom"><span>TRADISI DALAM SETIAP DETAIL</span><a href="#pilihan" aria-label="Lihat koleksi pilihan"><ArrowDown size={18} /></a><span className="hidden sm:block">EST. 2021</span></div>
         </div>
       </section>
 
-      <div className="collection-strip"><span>TUNGGAL</span><i /> <span>DUO</span><i /><span>RAMPAK</span><i /><span>KARAWANG</span></div>
-
-      <section id="pilihan" className="site-width section-space">
-        <div data-reveal className="section-heading">
-          <div><p className="eyebrow">Dipilih untuk panggungmu</p><h2 className="section-title">Koleksi <em>pilihan.</em></h2></div>
-          <Link to="/catalog" className="text-link">Lihat semua koleksi <ArrowUpRight size={17} /></Link>
-        </div>
-        <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 lg:grid-cols-4 lg:gap-x-7">
-          {featured.map((item) => <CostumeCard key={item.id || item.src} item={item} index={costumes.findIndex(c => c.src === item.src)} />)}
-        </div>
+      <section data-reveal className="mx-auto max-w-6xl px-6 pt-12">
+        <h2 className="font-display text-3xl">Sewa Kostum Jaipong di Karawang</h2>
+        <p className="mt-4 max-w-3xl text-muted">
+          Fapong Gallery menyediakan sewa kostum Jaipong untuk tunggal, duo, dan rampak,
+          untuk hajatan, acara sekolah, dan pentas. Pilih koleksi di katalog, lalu
+          konfirmasikan tanggal acara, jumlah penari, dan ukuran melalui WhatsApp.
+        </p>
+        <p className="mt-3 max-w-3xl text-sm text-muted">
+          Pengambilan di studio: Jl. HOS Cokroaminoto No.4, Karawang Kulon,
+          Kec. Karawang Bar., Karawang, Jawa Barat 41311.
+          {" "}<Link to="/contact" className="text-ink underline decoration-rose underline-offset-4">Lihat kontak dan peta studio</Link>.
+        </p>
       </section>
 
-      <section className="story-section">
-        <div className="site-width grid items-center gap-12 py-16 md:grid-cols-2 md:gap-20 md:py-24">
-          <div data-reveal className="story-photo"><img loading="lazy" decoding="async" src="/imagine_images/catalog/c12.jpg" alt="Kostum Jaipong hijau putih untuk penampilan rampak" /><span>WARNA. GERAK. CERITA.</span></div>
-          <div data-reveal><p className="eyebrow">Lebih dekat dengan Fapong</p><h2 className="section-title">Tradisi yang hidup.<br /><em>Pesona yang terasa.</em></h2><p className="mt-6 text-muted leading-8">Sejak 2021, Fapong Gallery menjadi bagian dari cerita panggung di Karawang. Kami menyewakan kostum Jaipong untuk hajatan, acara sekolah, dan pentas—dari satu penari hingga satu kelompok.</p><p className="mt-4 text-muted leading-8">Foto dalam katalog menampilkan kostum yang disewakan. Pilih warna dan set yang kamu sukai, lalu diskusikan kebutuhan penampilanmu bersama kami.</p><Link to="/about" className="text-link mt-7">Cerita Fapong Gallery <ArrowRight size={17} /></Link></div>
+      <section className="mx-auto max-w-6xl px-6 py-16">
+        <div data-reveal className="flex items-end justify-between gap-4">
+          <h2 className="font-display text-4xl">Best Seller</h2>
+          <Link to="/catalog" className="text-sm underline decoration-rose underline-offset-4">
+            Semua set
+          </Link>
+        </div>
+        <div className="mt-10 grid grid-cols-2 items-start gap-x-5 gap-y-10 md:grid-cols-4">
+          {featured.map((item) => {
+            const index = costumes.findIndex((c) => c.src === item.src);
+            return (
+              <Link
+                data-reveal
+                key={item.src}
+                to={`/catalog/c${String(index + 1).padStart(2, "0")}`}
+                className="motion-card block"
+              >
+                <img loading="lazy" decoding="async" src={item.src} alt={item.label || item.name} className="h-auto w-full" />
+              </Link>
+            );
+          })}
         </div>
       </section>
-
-      <section className="site-width section-space">
-        <div data-reveal className="section-heading"><div><p className="eyebrow">Dari pilihan ke penampilan</p><h2 className="section-title">Tiga langkah <em>mudah.</em></h2></div><p className="max-w-xs text-sm text-muted leading-6">Kami bantu kamu memilih set dan menyiapkan kebutuhan kostum melalui WhatsApp.</p></div>
-        <div className="mt-12 grid gap-8 md:grid-cols-3">{steps.map(([number,title,copy])=><article data-reveal key={number} className="rental-step"><span>{number}</span><h3 className="mt-6 font-display text-3xl">{title}</h3><p className="mt-3 text-sm leading-7 text-muted">{copy}</p></article>)}</div>
-      </section>
-
-      <section className="studio-banner"><div data-reveal className="site-width flex flex-col justify-between gap-8 py-14 md:flex-row md:items-center"><div><p className="eyebrow text-[#d6bd95]">Sewa kostum Jaipong di Karawang</p><h2 className="mt-3 font-display text-4xl sm:text-5xl">Cerita panggungmu dimulai di sini.</h2><p className="mt-5 flex max-w-xl items-start gap-3 text-sm leading-7 text-white/65"><MapPin size={18} className="mt-1 shrink-0" />Jl. HOS Cokroaminoto No.4, Karawang Kulon, Kec. Karawang Bar., Karawang, Jawa Barat 41311</p></div><Link to="/contact" className="button-light shrink-0 self-start md:self-center">Kunjungi studio <ArrowUpRight size={18} /></Link></div></section>
     </main>
   );
 }

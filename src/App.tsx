@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { PageMotion } from "@/components/page-motion";
 import { Seo } from "@/components/seo";
@@ -15,7 +14,6 @@ function PublicSite() {
   return (
     <>
       <PageMotion />
-      <a href="#main-content" className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-50 focus:bg-cream focus:p-3">Langsung ke konten</a>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -31,9 +29,7 @@ function PublicSite() {
 }
 
 export function App() {
-  const { pathname } = useLocation();
-  const admin = pathname.startsWith("/admin");
-  useEffect(() => { window.scrollTo({ top: 0, behavior: "instant" }); }, [pathname]);
+  const admin = useLocation().pathname.startsWith("/admin");
   return (<>
     <Seo />
     {admin ? (

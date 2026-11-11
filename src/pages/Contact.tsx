@@ -11,7 +11,7 @@ export function ContactPage() {
   }
 
   return (
-    <main id="main-content" className="mx-auto grid max-w-6xl gap-12 px-6 py-12 md:grid-cols-2">
+    <main className="mx-auto grid max-w-6xl gap-12 px-6 py-12 md:grid-cols-2">
       <ol className="grid gap-8 border-b border-rose/30 pb-10 md:col-span-2 md:grid-cols-3">
         {[
           ["01", "Pilih set", "Buka katalog, lalu catat nomor dan nama kostumnya."],
