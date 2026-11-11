@@ -53,13 +53,13 @@ export function CostumePage() {
         <button type="button" onClick={() => setOpen(true)} className="block w-full" aria-label="Perbesar foto">
           <img src={item.src} alt={item.label} className="mx-auto h-auto max-h-[78vh] w-auto max-w-full" />
         </button>
-        <div>
+        <div className="flex flex-col items-start">
           <p className="text-xs tracking-widest text-rose">{code}</p>
-          <h1 className="mt-3 inline-block bg-rose/15 px-4 py-3 text-2xl font-medium leading-snug">{item.label}</h1>
-          <a href={ask} className="mt-8 inline-flex bg-ink px-5 py-3 text-sm text-cream">
+          <h1 className="mt-3 w-full bg-rose/15 px-5 py-4 text-2xl font-medium leading-snug">{item.label}</h1>
+          <a href={ask} className="mt-6 inline-flex bg-ink px-5 py-3 text-sm text-cream">
             Tanya set ini
           </a>
-          <div className="mt-12 flex items-start justify-between gap-6 border-t border-rose/30 pt-6 text-sm">
+          <div className="mt-10 flex w-full items-start justify-between gap-6 border-t border-rose/30 pt-6 text-sm">
             {prev !== null ? (
               <Link to={`/catalog/${slugAt(prev)}`} className="hover:text-rose">
                 <span className="block text-xs text-muted">Sebelumnya</span>
