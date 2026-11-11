@@ -16,7 +16,7 @@ export function ContactPage() {
         {[
           ["01", "Pilih set", "Buka katalog, lalu catat nomor dan nama kostumnya."],
           ["02", "Kirim tanggal", "Sebutkan tanggal acara dan jumlah penari lewat WhatsApp."],
-          ["03", "Ambil di studio", "Pengambilan di Fapong Gallery, Jalan Bunut Kertayasa."],
+          ["03", "Ambil di studio", "Pengambilan di Fapong Gallery, Jl. HOS Cokroaminoto No.4."],
         ].map(([n, title, copy]) => (
           <li key={n}>
             <p className="text-xs tracking-widest text-rose">{n}</p>
@@ -53,12 +53,12 @@ export function ContactPage() {
             <dd>
               <a
                 className="underline decoration-rose underline-offset-4"
-                href="https://www.google.com/maps/search/?api=1&query=-6.3128246,107.2911568"
+                href="https://www.google.com/maps/search/?api=1&query=Jl.%20HOS%20Cokroaminoto%20No.4%2C%20Karawang%20Kulon%2C%20Kec.%20Karawang%20Bar.%2C%20Karawang%2C%20Jawa%20Barat%2041311"
               >
                 Fapong Gallery
               </a>
               <span className="mt-1 block text-muted">
-                Jalan Bunut Kertayasa, Karawang Kulon, Karawang Barat, Jawa Barat 41311
+                Jl. HOS Cokroaminoto No.4, Karawang Kulon, Kec. Karawang Bar., Karawang, Jawa Barat 41311
               </span>
             </dd>
           </div>
@@ -95,11 +95,11 @@ export function ContactPage() {
         <p className="text-xs uppercase tracking-widest text-rose">Peta</p>
         <h2 className="mt-2 font-display text-3xl">Fapong Gallery</h2>
         <p className="mt-2 text-sm text-muted">
-          Jalan Bunut Kertayasa, Karawang Kulon, Karawang Barat, Jawa Barat 41311
+          Jl. HOS Cokroaminoto No.4, Karawang Kulon, Kec. Karawang Bar., Karawang, Jawa Barat 41311
         </p>
         <iframe
-          title="Peta Fapong Gallery di Jalan Bunut Kertayasa"
-          src="https://maps.google.com/maps?q=-6.3128246,107.2911568&z=17&hl=id&output=embed"
+          title="Peta Fapong Gallery di Jl. HOS Cokroaminoto No.4"
+          src="https://maps.google.com/maps?q=Jl.%20HOS%20Cokroaminoto%20No.4%2C%20Karawang%20Kulon%2C%20Kec.%20Karawang%20Bar.%2C%20Karawang%2C%20Jawa%20Barat%2041311&z=17&hl=id&output=embed"
           className="mt-4 h-80 w-full border border-rose/30"
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
