@@ -4,32 +4,34 @@ import { costumes, featured } from "@/data/content";
 export function Home() {
   return (
     <main>
-      <section className="relative min-h-[85vh] overflow-hidden">
+      <section className="relative">
         <img
           src="/imagine_images/hero_stage.jpg"
-          alt=""
-          className="absolute inset-0 h-full w-full object-cover object-[70%_center]"
+          alt="Penari Jaipong di panggung"
+          className="block h-auto w-full"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/45 to-ink/15" />
-        <div className="relative mx-auto flex min-h-[85vh] max-w-6xl items-center px-6 py-16">
-          <div className="max-w-xl text-cream">
-            <p className="text-xs uppercase tracking-widest text-cream/80">Karawang · sewa per acara</p>
-            <h1 className="mt-4 font-display text-5xl leading-tight md:text-6xl">
-              Kostum Jaipong yang siap naik panggung.
-            </h1>
-            <p className="mt-5 max-w-md text-cream/85">
-              Busana di foto adalah set yang disewakan.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/catalog" className="bg-cream px-5 py-3 text-sm text-ink">
-                Buka katalog
-              </Link>
-              <a
-                href="https://wa.me/6285771244199"
-                className="border border-cream px-5 py-3 text-sm text-cream"
-              >
-                Tanya tanggal
-              </a>
+        <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/40 to-transparent" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="mx-auto w-full max-w-6xl px-6">
+            <div className="max-w-xl text-cream">
+              <p className="text-xs uppercase tracking-widest text-cream/80">Karawang · sewa per acara</p>
+              <h1 className="mt-4 font-display text-5xl leading-tight md:text-6xl">
+                Kostum Jaipong yang siap naik panggung.
+              </h1>
+              <p className="mt-5 max-w-md text-cream/85">
+                Busana di foto adalah set yang disewakan.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link to="/catalog" className="bg-cream px-5 py-3 text-sm text-ink">
+                  Buka katalog
+                </Link>
+                <a
+                  href="https://wa.me/6285771244199"
+                  className="border border-cream px-5 py-3 text-sm text-cream"
+                >
+                  Tanya tanggal
+                </a>
+              </div>
             </div>
           </div>
         </div>
