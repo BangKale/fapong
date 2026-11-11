@@ -52,12 +52,9 @@ export function Home() {
               <Link
                 key={item.src}
                 to={`/catalog/c${String(index + 1).padStart(2, "0")}`}
-                className="group row-span-4 grid grid-rows-subgrid gap-y-1"
+                className="block"
               >
-                <img src={item.src} alt={item.name} className="h-auto w-full self-end" />
-                <p className="pt-3 text-xs tracking-widest text-rose">{String(index + 1).padStart(2, "0")}</p>
-                <h3 className="font-display text-2xl leading-tight group-hover:text-rose">{item.name}</h3>
-                <p className="text-sm text-muted">{item.note}</p>
+                <img src={item.src} alt={item.label || item.name} className="h-auto w-full" />
               </Link>
             );
           })}
