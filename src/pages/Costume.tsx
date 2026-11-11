@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { costumes } from "@/data/content";
@@ -59,19 +59,19 @@ export function CostumePage() {
           <a href={ask} className="mt-6 inline-flex bg-ink px-5 py-3 text-sm text-cream">
             Tanya set ini
           </a>
-          <div className="mt-10 flex w-full items-start justify-between gap-6 border-t border-rose/30 pt-6 text-sm">
+          <div className="mt-8 grid w-full grid-cols-2 gap-3">
             {prev !== null ? (
-              <Link to={`/catalog/${slugAt(prev)}`} className="hover:text-rose">
-                <span className="block text-xs text-muted">Sebelumnya</span>
-                {costumes[prev].label}
+              <Link to={`/catalog/${slugAt(prev)}`} className="inline-flex items-center justify-center gap-2 border border-rose/40 px-4 py-3 text-sm hover:border-rose">
+                <ChevronLeft size={16} />
+                Sebelumnya
               </Link>
             ) : (
               <span />
             )}
             {next !== null ? (
-              <Link to={`/catalog/${slugAt(next)}`} className="text-right hover:text-rose">
-                <span className="block text-xs text-muted">Berikutnya</span>
-                {costumes[next].label}
+              <Link to={`/catalog/${slugAt(next)}`} className="inline-flex items-center justify-center gap-2 border border-rose/40 px-4 py-3 text-sm hover:border-rose">
+                Berikutnya
+                <ChevronRight size={16} />
               </Link>
             ) : (
               <span />
