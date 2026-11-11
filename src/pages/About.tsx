@@ -27,7 +27,7 @@ export function AboutPage() {
               alt="Grup kostum hijau putih"
               className="block h-auto max-h-[72vh] w-auto max-w-full object-contain"
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#fffdfb] from-0% via-[#fdf8f6]/95 via-[28%] to-transparent to-[58%]" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#fffdfb]/80 to-transparent to-[14%]" />
           </div>
         </div>
       </section>
