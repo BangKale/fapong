@@ -34,15 +34,20 @@ export function GalleryPage() {
     <main className="mx-auto max-w-6xl px-6 py-12">
       <p className="text-xs uppercase tracking-widest text-rose">Galeri</p>
       <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Our Moments, Our Stories</h1>
-      <div className="mt-10 grid grid-cols-2 items-start gap-x-4 gap-y-10 md:gap-x-5">
+      <div className="mt-10 grid grid-cols-2 items-start gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-5">
         {photos.map((src, index) => {
           const number = String(index + 1).padStart(2, "0");
           return (
-            <figure key={src} className="row-span-2 grid grid-rows-subgrid gap-y-3">
-              <button type="button" onClick={() => setOpen(src)} className="block w-full self-end" aria-label={`Perbesar foto ${number}`}>
-                <img src={src} alt="" className="h-auto w-full" />
+            <figure key={src} className="flex flex-col">
+              <button
+                type="button"
+                onClick={() => setOpen(src)}
+                className="flex aspect-[3/4] w-full items-center justify-center"
+                aria-label={`Perbesar foto ${number}`}
+              >
+                <img src={src} alt="" className="max-h-full max-w-full object-contain" />
               </button>
-              <figcaption className="text-xs tracking-widest text-rose">{number}</figcaption>
+              <figcaption className="mt-3 text-xs tracking-widest text-rose">{number}</figcaption>
             </figure>
           );
         })}
