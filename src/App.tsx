@@ -1,4 +1,5 @@
 import { Route, Routes, useLocation } from "react-router-dom";
+import { Seo } from "@/components/seo";
 import { Footer, Header } from "@/components/site-frame";
 import { AboutPage } from "@/pages/About";
 import { AdminPage } from "@/pages/Admin";
@@ -27,11 +28,14 @@ function PublicSite() {
 
 export function App() {
   const admin = useLocation().pathname.startsWith("/admin");
-  return admin ? (
+  return (<>
+    <Seo />
+    {admin ? (
     <Routes>
       <Route path="/admin" element={<AdminPage />} />
     </Routes>
   ) : (
     <PublicSite />
-  );
+  )}
+  </>);
 }

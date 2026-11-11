@@ -10,7 +10,7 @@ export function CatalogPage() {
       <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 md:grid-cols-3">
         {costumes.map((item, index) => (
           <Link key={item.src} to={`/catalog/c${String(index + 1).padStart(2, "0")}`} className="flex h-full flex-col justify-end">
-            <img src={item.src} alt={item.label} className="h-auto w-full" />
+            <img loading="lazy" decoding="async" src={item.src} alt={item.label} className="h-auto w-full" />
             <div className="flex min-h-28 flex-col items-center justify-center bg-rose/15 px-3 pb-7 pt-3 text-center">
               <p className="text-[11px] tracking-widest text-rose">{String(index + 1).padStart(2, "0")}</p>
               <h2 className="mt-1 text-sm font-medium leading-snug">{item.label}</h2>

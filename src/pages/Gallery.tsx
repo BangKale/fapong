@@ -52,7 +52,7 @@ export function GalleryPage() {
               return (
                 <figure key={src}>
                   <button type="button" onClick={() => setOpen(src)} className="block w-full" aria-label={`Perbesar foto ${number}`}>
-                    <img src={src} alt="" className="aspect-[3/4] w-full object-cover" />
+                    <img loading="lazy" decoding="async" src={src} alt="" className="aspect-[3/4] w-full object-cover" />
                   </button>
                   <figcaption className="mt-3 text-xs tracking-widest text-rose">{number}</figcaption>
                 </figure>
@@ -68,7 +68,7 @@ export function GalleryPage() {
               return (
                 <figure key={src}>
                   <button type="button" onClick={() => setOpen(src)} className="block w-full" aria-label={`Perbesar foto ${number}`}>
-                    <img src={src} alt="" className={`${group.frame} w-full`} />
+                    <img loading="lazy" decoding="async" src={src} alt="" className={`${group.frame} w-full`} />
                   </button>
                   <figcaption className="mt-3 text-xs tracking-widest text-rose">{number}</figcaption>
                 </figure>
