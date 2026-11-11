@@ -7,11 +7,10 @@ export function CatalogPage() {
       <p className="text-xs uppercase tracking-widest text-rose">Katalog</p>
       <div className="mt-10 grid grid-cols-2 items-start gap-x-5 gap-y-10 md:grid-cols-3">
         {costumes.map((item, index) => (
-          <Link key={item.src} to={`/catalog/c${String(index + 1).padStart(2, "0")}`} className="row-span-4 grid grid-rows-subgrid gap-y-1">
-            <img src={item.src} alt={item.name} className="h-auto w-full self-end" />
+          <Link key={item.src} to={`/catalog/c${String(index + 1).padStart(2, "0")}`} className="row-span-3 grid grid-rows-subgrid gap-y-1">
+            <img src={item.src} alt={item.label} className="h-auto w-full self-end" />
             <p className="pt-3 text-xs tracking-widest text-rose">{String(index + 1).padStart(2, "0")}</p>
-            <h2 className="font-display text-2xl leading-tight">{item.name}</h2>
-            <p className="text-sm text-muted">{item.note}</p>
+            <h2 className="font-display text-xl leading-snug">{item.label}</h2>
           </Link>
         ))}
       </div>

@@ -41,7 +41,7 @@ export function CostumePage() {
   const prev = index > 0 ? index - 1 : null;
   const next = index < costumes.length - 1 ? index + 1 : null;
   const ask = `https://wa.me/6285771244199?text=${encodeURIComponent(
-    `Halo Fapong.gallery, saya ingin sewa set ${code} ${item.name} untuk acara.`,
+    `Halo Fapong.gallery, saya ingin sewa set ${code} ${item.label} untuk acara.`,
   )}`;
 
   return (
@@ -51,12 +51,11 @@ export function CostumePage() {
       </Link>
       <div className="mt-8 grid items-center gap-10 md:grid-cols-2">
         <button type="button" onClick={() => setOpen(true)} className="block w-full" aria-label="Perbesar foto">
-          <img src={item.src} alt={item.name} className="mx-auto h-auto max-h-[78vh] w-auto max-w-full" />
+          <img src={item.src} alt={item.label} className="mx-auto h-auto max-h-[78vh] w-auto max-w-full" />
         </button>
         <div>
           <p className="text-xs tracking-widest text-rose">{code}</p>
-          <h1 className="mt-2 font-display text-5xl leading-tight">{item.name}</h1>
-          <p className="mt-4 text-muted">{item.note}</p>
+          <h1 className="mt-2 font-display text-4xl leading-tight">{item.label}</h1>
           <a href={ask} className="mt-8 inline-flex bg-ink px-5 py-3 text-sm text-cream">
             Tanya set ini
           </a>
@@ -64,7 +63,7 @@ export function CostumePage() {
             {prev !== null ? (
               <Link to={`/catalog/${slugAt(prev)}`} className="hover:text-rose">
                 <span className="block text-xs text-muted">Sebelumnya</span>
-                {costumes[prev].name}
+                {costumes[prev].label}
               </Link>
             ) : (
               <span />
@@ -72,7 +71,7 @@ export function CostumePage() {
             {next !== null ? (
               <Link to={`/catalog/${slugAt(next)}`} className="text-right hover:text-rose">
                 <span className="block text-xs text-muted">Berikutnya</span>
-                {costumes[next].name}
+                {costumes[next].label}
               </Link>
             ) : (
               <span />
