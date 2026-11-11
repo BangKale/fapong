@@ -40,13 +40,9 @@ export const costumes = [
   { src: "/imagine_images/catalog/c31.jpg", name: "Merah Biru", note: "Mahkota emas, kain merah dan biru." },
   { src: "/imagine_images/catalog/c32.jpg", name: "Putih Kuning", note: "Atasan putih emas, celana kuning." },
   { src: "/imagine_images/catalog/c33.jpg", name: "Merah Putih", note: "Selendang putih, celana coklat." },
-  { src: "/imagine_images/catalog/c34.jpg", name: "Hijau Putih", note: "Grup, atasan hijau emas, rok putih." },
-  { src: "/imagine_images/catalog/c35.jpg", name: "Ungu Biru", note: "Kebaya ungu, rok biru, selendang putih." },
-  { src: "/imagine_images/catalog/c36.jpg", name: "Turquoise Magenta", note: "Duo, celana lebar magenta." },
-  { src: "/imagine_images/catalog/c37.jpg", name: "Orange Hijau", note: "Grup, kebaya orange, selendang hijau." },
 ] as const;
 
-export const featured = [costumes[33], costumes[34], costumes[35], costumes[36]];
+export const featured = [costumes[11], costumes[20], costumes[1], costumes[23]];
 
 export type GalleryTag = "panggung" | "tradisi" | "potret" | "budaya";
 
