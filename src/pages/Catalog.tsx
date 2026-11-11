@@ -6,6 +6,7 @@ export function CatalogPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">
       <p className="text-xs uppercase tracking-widest text-rose">Katalog</p>
+      <h1 className="mt-3 font-display text-5xl leading-tight">Lihat Koleksi, Temukan Pesona.</h1>
       <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 md:grid-cols-3">
         {costumes.map((item, index) => (
           <Link key={item.src} to={`/catalog/c${String(index + 1).padStart(2, "0")}`} className="flex h-full flex-col justify-end">

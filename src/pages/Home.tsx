@@ -9,10 +9,10 @@ export function Home() {
         <div className="w-full md:w-5/12">
           <p className="text-xs uppercase tracking-widest text-rose">Karawang · sewa per acara</p>
           <h1 className="mt-4 font-display text-5xl leading-tight md:text-6xl">
-            Kostum Jaipong yang siap naik panggung.
+            Pesona Tradisi, Gemilang di Atas Panggung.
           </h1>
-          <p className="mt-5 max-w-md text-muted">
-            Busana di foto adalah set yang disewakan.
+          <p className="mt-5 max-w-lg text-muted">
+            Hadirkan keindahan seni dan budaya melalui koleksi kostum pilihan dari Fapong Gallery. Temukan busana terbaik untuk setiap pertunjukan dan momen istimewa.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/catalog" className="bg-ink px-5 py-3 text-sm text-cream">
