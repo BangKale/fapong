@@ -36,10 +36,7 @@ export function GalleryPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">
       <p className="text-xs uppercase tracking-widest text-rose">Galeri</p>
-      <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">
-        <span className="block text-sm font-sans font-normal uppercase tracking-widest text-rose">Modern & Minimalist</span>
-        <span className="mt-2 block">Our Moments, Our Stories</span>
-      </h1>
+      <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Our Moments, Our Stories</h1>
       <div className="mt-14 space-y-14">
         {stories.map((images) => (
           <section key={images[0].src} className="border-t border-rose/30 pt-8">
