@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { costumes } from "@/data/content";
+import { useSite } from "@/data/site";
 
 export function CatalogPage() {
+  const { costumes } = useSite();
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">
       <p className="text-xs uppercase tracking-widest text-rose">Katalog</p>

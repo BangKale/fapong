@@ -1,5 +1,6 @@
 import { X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { useSite } from "@/data/site";
 
 const groups = [
   {
@@ -25,6 +26,7 @@ const groups = [
 ];
 
 export function GalleryPage() {
+  const { gallery } = useSite();
   const [open, setOpen] = useState<string | null>(null);
   let count = 0;
 
@@ -42,7 +44,23 @@ export function GalleryPage() {
       <p className="text-xs uppercase tracking-widest text-rose">Galeri</p>
       <h1 className="mt-3 font-display text-5xl leading-tight">Our Moments, Our Stories</h1>
       <div className="mt-12 space-y-12">
-        {groups.map((group) => (
+        {gallery ? (
+          <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3">
+            {gallery.map((src) => {
+              count += 1;
+              const number = String(count).padStart(2, "0");
+              return (
+                <figure key={src}>
+                  <button type="button" onClick={() => setOpen(src)} className="block w-full" aria-label={`Perbesar foto ${number}`}>
+                    <img src={src} alt="" className="aspect-[3/4] w-full object-cover" />
+                  </button>
+                  <figcaption className="mt-3 text-xs tracking-widest text-rose">{number}</figcaption>
+                </figure>
+              );
+            })}
+          </div>
+        ) : (
+          groups.map((group) => (
           <div key={group.srcs[0]} className={`grid gap-x-4 gap-y-8 ${group.cols}`}>
             {group.srcs.map((src) => {
               count += 1;
@@ -57,7 +75,8 @@ export function GalleryPage() {
               );
             })}
           </div>
-        ))}
+        ))
+        )}
       </div>
       {open ? (
         <div

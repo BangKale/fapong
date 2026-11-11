@@ -1,13 +1,14 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Footer, Header } from "@/components/site-frame";
 import { AboutPage } from "@/pages/About";
+import { AdminPage } from "@/pages/Admin";
 import { CatalogPage } from "@/pages/Catalog";
 import { CostumePage } from "@/pages/Costume";
 import { ContactPage } from "@/pages/Contact";
 import { GalleryPage } from "@/pages/Gallery";
 import { Home } from "@/pages/Home";
 
-export function App() {
+function PublicSite() {
   return (
     <>
       <Header />
@@ -21,5 +22,16 @@ export function App() {
       </Routes>
       <Footer />
     </>
+  );
+}
+
+export function App() {
+  const admin = useLocation().pathname.startsWith("/admin");
+  return admin ? (
+    <Routes>
+      <Route path="/admin" element={<AdminPage />} />
+    </Routes>
+  ) : (
+    <PublicSite />
   );
 }

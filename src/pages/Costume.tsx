@@ -1,13 +1,14 @@
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { costumes } from "@/data/content";
+import { useSite } from "@/data/site";
 
 function slugAt(index: number) {
   return `c${String(index + 1).padStart(2, "0")}`;
 }
 
 export function CostumePage() {
+  const { costumes } = useSite();
   const { slug } = useParams();
   const index = costumes.findIndex((_, i) => slugAt(i) === slug);
   const item = costumes[index];

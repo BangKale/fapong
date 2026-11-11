@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { costumes, featured } from "@/data/content";
+import { useSite } from "@/data/site";
 
 export function Home() {
+  const { costumes, featured, hero } = useSite();
   return (
     <main>
       <section className="mx-auto flex max-w-6xl flex-col items-center gap-10 px-6 py-12 md:flex-row md:py-16">
@@ -28,7 +29,7 @@ export function Home() {
         <figure className="w-full md:w-7/12">
           <div className="relative ml-auto w-fit max-w-full">
             <img
-              src="/imagine_images/hero_stage.jpg"
+              src={hero}
               alt="Penari Jaipong di panggung"
               className="block h-auto max-h-[72vh] w-auto max-w-full"
             />
