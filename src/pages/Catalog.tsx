@@ -9,7 +9,7 @@ export function CatalogPage() {
       <h1 className="mt-3 font-display text-5xl leading-tight">Lihat Koleksi, Temukan Pesona.</h1>
       <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 md:grid-cols-3">
         {costumes.map((item, index) => (
-          <Link key={item.src} to={`/catalog/c${String(index + 1).padStart(2, "0")}`} className="flex h-full flex-col justify-end">
+          <Link data-reveal key={item.src} to={`/catalog/c${String(index + 1).padStart(2, "0")}`} className="motion-card flex h-full flex-col justify-end">
             <img loading="lazy" decoding="async" src={item.src} alt={item.label} className="h-auto w-full" />
             <div className="flex min-h-28 flex-col items-center justify-center bg-rose/15 px-3 pb-7 pt-3 text-center">
               <p className="text-[11px] tracking-widest text-rose">{String(index + 1).padStart(2, "0")}</p>

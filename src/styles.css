@@ -39,3 +39,20 @@
     scroll-behavior: auto;
   }
 }
+
+/* Content stays visible when animation APIs are unavailable. */
+@media (prefers-reduced-motion: no-preference) {
+  .motion-card img {
+    transition: filter 240ms ease;
+  }
+
+  a, button {
+    transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease;
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .motion-card:hover img {
+    filter: brightness(1.06);
+  }
+}

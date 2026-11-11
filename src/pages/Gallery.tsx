@@ -50,8 +50,8 @@ export function GalleryPage() {
               count += 1;
               const number = String(count).padStart(2, "0");
               return (
-                <figure key={src}>
-                  <button type="button" onClick={() => setOpen(src)} className="block w-full" aria-label={`Perbesar foto ${number}`}>
+                <figure data-reveal key={src}>
+                  <button type="button" onClick={() => setOpen(src)} className="motion-card block w-full" aria-label={`Perbesar foto ${number}`}>
                     <img loading="lazy" decoding="async" src={src} alt="" className="aspect-[3/4] w-full object-cover" />
                   </button>
                   <figcaption className="mt-3 text-xs tracking-widest text-rose">{number}</figcaption>
@@ -66,8 +66,8 @@ export function GalleryPage() {
               count += 1;
               const number = String(count).padStart(2, "0");
               return (
-                <figure key={src}>
-                  <button type="button" onClick={() => setOpen(src)} className="block w-full" aria-label={`Perbesar foto ${number}`}>
+                <figure data-reveal key={src}>
+                  <button type="button" onClick={() => setOpen(src)} className="motion-card block w-full" aria-label={`Perbesar foto ${number}`}>
                     <img loading="lazy" decoding="async" src={src} alt="" className={`${group.frame} w-full`} />
                   </button>
                   <figcaption className="mt-3 text-xs tracking-widest text-rose">{number}</figcaption>

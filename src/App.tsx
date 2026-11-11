@@ -1,4 +1,5 @@
 import { Route, Routes, useLocation } from "react-router-dom";
+import { PageMotion } from "@/components/page-motion";
 import { Seo } from "@/components/seo";
 import { Footer, Header } from "@/components/site-frame";
 import { AboutPage } from "@/pages/About";
@@ -12,6 +13,7 @@ import { Home } from "@/pages/Home";
 function PublicSite() {
   return (
     <>
+      <PageMotion />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
