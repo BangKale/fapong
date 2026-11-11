@@ -35,7 +35,6 @@ export function Home() {
             />
             <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#fffdfb] from-0% via-[#fdf8f6]/95 via-[28%] to-transparent to-[58%]" />
           </div>
-          <figcaption className="mt-2 text-right text-xs text-muted">Panggung · kostum ungu emas</figcaption>
         </figure>
       </section>
 
