@@ -28,8 +28,8 @@ export function AboutPage() {
               className="block h-auto max-h-[72vh] w-auto max-w-full object-contain"
             />
             <div
-              className="pointer-events-none absolute inset-y-0 left-0 w-10"
-              style={{ background: "linear-gradient(to right, rgb(255 253 251 / 0.45), transparent)" }}
+              className="pointer-events-none absolute inset-y-0 right-0 w-2/5"
+              style={{ background: "linear-gradient(to right, transparent, rgb(255 253 251 / 0.92))" }}
             />
           </div>
         </div>
