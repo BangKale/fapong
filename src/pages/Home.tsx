@@ -27,7 +27,7 @@ export function Home() {
                 Buka katalog
               </Link>
               <a
-                href="https://wa.me/6285771244199"
+                href="https://wa.me/6285771244199?text=Halo%20Fapong.gallery%2C%20saya%20ingin%20bertanya%20tentang%20sewa%20kostum%20Jaipong.%0A%0ATanggal%20acara%3A%20%0AJumlah%20penari%3A%20%0ASet%20yang%20diminati%3A%20"
                 className="border border-cream/70 bg-black/15 px-5 py-3 text-sm hover:bg-white/10"
               >
                 Tanya tanggal

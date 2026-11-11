@@ -73,7 +73,7 @@ export function Footer() {
               <a href="https://www.instagram.com/fapong.gallery/" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center border border-rose/40 text-ink">
                 <InstagramIcon />
               </a>
-              <a href="https://wa.me/6285771244199" aria-label="WhatsApp" className="inline-flex h-10 w-10 items-center justify-center border border-rose/40 text-ink">
+              <a href="https://wa.me/6285771244199?text=Halo%20Fapong.gallery%2C%20saya%20ingin%20bertanya%20tentang%20sewa%20kostum%20Jaipong.%0A%0ATanggal%20acara%3A%20%0AJumlah%20penari%3A%20%0ASet%20yang%20diminati%3A%20" aria-label="WhatsApp" className="inline-flex h-10 w-10 items-center justify-center border border-rose/40 text-ink">
                 <WhatsAppIcon />
               </a>
             </div>
@@ -89,7 +89,7 @@ export function Footer() {
         </div>
         <p className="border-t border-rose/20 px-6 py-4 text-center text-xs text-muted">© 2026 Fapong.gallery</p>
       </footer>
-      <a href="https://wa.me/6285771244199" aria-label="Chat WhatsApp" className="fixed bottom-5 right-5 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg">
+      <a href="https://wa.me/6285771244199?text=Halo%20Fapong.gallery%2C%20saya%20ingin%20bertanya%20tentang%20sewa%20kostum%20Jaipong.%0A%0ATanggal%20acara%3A%20%0AJumlah%20penari%3A%20%0ASet%20yang%20diminati%3A%20" aria-label="Chat WhatsApp" className="fixed bottom-5 right-5 z-30 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg">
         <WhatsAppIcon className="h-7 w-7" />
       </a>
     </>

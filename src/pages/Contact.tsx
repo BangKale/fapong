@@ -32,7 +32,7 @@ export function ContactPage() {
           <div>
             <dt className="text-muted">WhatsApp</dt>
             <dd>
-              <a className="underline decoration-rose underline-offset-4" href="https://wa.me/6285771244199">
+              <a className="underline decoration-rose underline-offset-4" href="https://wa.me/6285771244199?text=Halo%20Fapong.gallery%2C%20saya%20ingin%20bertanya%20tentang%20sewa%20kostum%20Jaipong.%0A%0ATanggal%20acara%3A%20%0AJumlah%20penari%3A%20%0ASet%20yang%20diminati%3A%20">
                 +62 857-7124-4199
               </a>
             </dd>
