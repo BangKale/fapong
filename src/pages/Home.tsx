@@ -26,11 +26,14 @@ export function Home() {
           </div>
         </div>
         <figure className="w-full md:w-7/12">
-          <img
-            src="/imagine_images/hero_stage.jpg"
-            alt="Penari Jaipong di panggung"
-            className="ml-auto block h-auto max-h-[72vh] w-auto max-w-full"
-          />
+          <div className="relative ml-auto w-fit max-w-full">
+            <img
+              src="/imagine_images/hero_stage.jpg"
+              alt="Penari Jaipong di panggung"
+              className="block h-auto max-h-[72vh] w-auto max-w-full"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-cream from-0% via-cream/80 via-[18%] to-transparent to-[42%]" />
+          </div>
           <figcaption className="mt-2 text-right text-xs text-muted">Panggung · kostum ungu emas</figcaption>
         </figure>
       </section>
