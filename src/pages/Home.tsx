@@ -32,7 +32,7 @@ export function Home() {
               alt="Penari Jaipong di panggung"
               className="block h-auto max-h-[72vh] w-auto max-w-full"
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-cream from-0% via-cream/80 via-[18%] to-transparent to-[42%]" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#fffdfb] from-0% via-[#fdf8f6]/95 via-[28%] to-transparent to-[58%]" />
           </div>
           <figcaption className="mt-2 text-right text-xs text-muted">Panggung · kostum ungu emas</figcaption>
         </figure>

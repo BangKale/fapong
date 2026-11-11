@@ -22,7 +22,7 @@
   }
 
   body {
-    background: var(--color-cream);
+    background: linear-gradient(165deg, #fffdfb 0%, #fdf8f6 55%, #f8efe8 100%);
     color: var(--color-ink);
     font-family: var(--font-sans);
     line-height: 1.55;
