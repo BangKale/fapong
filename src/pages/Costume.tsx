@@ -55,7 +55,7 @@ export function CostumePage() {
         </button>
         <div>
           <p className="text-xs tracking-widest text-rose">{code}</p>
-          <h1 className="mt-2 font-display text-4xl leading-tight">{item.label}</h1>
+          <h1 className="mt-3 inline-block bg-rose/15 px-4 py-3 text-2xl font-medium leading-snug">{item.label}</h1>
           <a href={ask} className="mt-8 inline-flex bg-ink px-5 py-3 text-sm text-cream">
             Tanya set ini
           </a>
