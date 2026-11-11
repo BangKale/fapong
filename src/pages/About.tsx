@@ -21,11 +21,11 @@ export function AboutPage() {
           </p>
         </div>
         <div className="flex w-full justify-end md:w-1/2">
-          <div className="relative w-fit max-w-full">
+          <div className="relative w-fit max-w-full overflow-hidden">
             <img
               src="/imagine_images/catalog/c12.jpg"
               alt="Grup kostum hijau putih"
-              className="block h-auto max-h-[72vh] w-auto max-w-full object-contain"
+              className="mb-[-7%] block h-auto max-h-[72vh] w-auto max-w-full object-contain"
             />
             <div
               className="pointer-events-none absolute inset-y-0 right-0 w-2/5"
