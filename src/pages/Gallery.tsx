@@ -1,13 +1,33 @@
 import { X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const rows = [
-  ["/imagine_images/gallery/g03.jpg", "/imagine_images/gallery/g05.jpg", "/imagine_images/gallery/g13.jpg"],
-  ["/imagine_images/gallery/g04.jpg", "/imagine_images/gallery/g07.jpg"],
-  ["/imagine_images/gallery/g09.jpg"],
-  ["/imagine_images/gallery/g08.jpg", "/imagine_images/gallery/g06.jpg"],
-  ["/imagine_images/gallery/g01.jpg", "/imagine_images/gallery/g10.jpg", "/imagine_images/gallery/g14.jpg"],
-  ["/imagine_images/gallery/g02.jpg", "/imagine_images/gallery/g12.jpg", "/imagine_images/gallery/g11.jpg"],
+const groups = [
+  {
+    frame: "aspect-[4/3]",
+    cols: "grid-cols-1 sm:grid-cols-2",
+    srcs: [
+      "/imagine_images/gallery/g03.jpg",
+      "/imagine_images/gallery/g05.jpg",
+      "/imagine_images/gallery/g04.jpg",
+      "/imagine_images/gallery/g07.jpg",
+      "/imagine_images/gallery/g13.jpg",
+    ],
+  },
+  {
+    frame: "aspect-video",
+    cols: "grid-cols-1 sm:grid-cols-2",
+    srcs: ["/imagine_images/gallery/g09.jpg", "/imagine_images/gallery/g08.jpg", "/imagine_images/gallery/g06.jpg"],
+  },
+  {
+    frame: "aspect-[3/4]",
+    cols: "grid-cols-2 sm:grid-cols-3",
+    srcs: ["/imagine_images/gallery/g01.jpg", "/imagine_images/gallery/g10.jpg", "/imagine_images/gallery/g14.jpg"],
+  },
+  {
+    frame: "aspect-[9/16]",
+    cols: "grid-cols-2 sm:grid-cols-3",
+    srcs: ["/imagine_images/gallery/g02.jpg", "/imagine_images/gallery/g12.jpg", "/imagine_images/gallery/g11.jpg"],
+  },
 ];
 
 export function GalleryPage() {
@@ -28,24 +48,15 @@ export function GalleryPage() {
       <p className="text-xs uppercase tracking-widest text-rose">Galeri</p>
       <h1 className="mt-3 font-display text-5xl leading-tight">Our Moments, Our Stories</h1>
       <div className="mt-12 space-y-12">
-        {rows.map((row) => (
-          <div
-            key={row[0]}
-            className={
-              row.length === 1
-                ? "grid grid-cols-1"
-                : row.length === 2
-                  ? "grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2"
-                  : "grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-3"
-            }
-          >
-            {row.map((src) => {
+        {groups.map((group) => (
+          <div key={group.srcs[0]} className={`grid gap-x-4 gap-y-8 ${group.cols}`}>
+            {group.srcs.map((src) => {
               count += 1;
               const number = String(count).padStart(2, "0");
               return (
                 <figure key={src}>
                   <button type="button" onClick={() => setOpen(src)} className="block w-full" aria-label={`Perbesar foto ${number}`}>
-                    <img src={src} alt="" className="h-auto w-full" />
+                    <img src={src} alt="" className={`${group.frame} w-full object-cover`} />
                   </button>
                   <figcaption className="mt-3 text-xs tracking-widest text-rose">{number}</figcaption>
                 </figure>
