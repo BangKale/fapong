@@ -3,24 +3,24 @@ import { useEffect, useState } from "react";
 
 const groups = [
   {
-    frame: "aspect-[4/3]",
+    frame: "aspect-[4/3] object-cover",
     cols: "grid-cols-1 sm:grid-cols-3",
     srcs: ["/imagine_images/gallery/g03.jpg", "/imagine_images/gallery/g05.jpg", "/imagine_images/gallery/g13.jpg"],
   },
   {
-    frame: "aspect-video",
+    frame: "aspect-video object-cover",
     cols: "grid-cols-1",
     srcs: ["/imagine_images/gallery/g08.jpg"],
   },
   {
-    frame: "aspect-[3/4]",
-    cols: "grid-cols-2 sm:grid-cols-3",
-    srcs: ["/imagine_images/gallery/g10.jpg"],
-  },
-  {
-    frame: "aspect-[9/16]",
-    cols: "grid-cols-2 sm:grid-cols-3",
-    srcs: ["/imagine_images/gallery/g02.jpg", "/imagine_images/gallery/g12.jpg", "/imagine_images/gallery/g11.jpg"],
+    frame: "aspect-[3/4] object-cover object-center",
+    cols: "grid-cols-2",
+    srcs: [
+      "/imagine_images/gallery/g10.jpg",
+      "/imagine_images/gallery/g02.jpg",
+      "/imagine_images/gallery/g12.jpg",
+      "/imagine_images/gallery/g11.jpg",
+    ],
   },
 ];
 
@@ -50,7 +50,7 @@ export function GalleryPage() {
               return (
                 <figure key={src}>
                   <button type="button" onClick={() => setOpen(src)} className="block w-full" aria-label={`Perbesar foto ${number}`}>
-                    <img src={src} alt="" className={`${group.frame} w-full object-cover`} />
+                    <img src={src} alt="" className={`${group.frame} w-full`} />
                   </button>
                   <figcaption className="mt-3 text-xs tracking-widest text-rose">{number}</figcaption>
                 </figure>
