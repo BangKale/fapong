@@ -1,25 +1,18 @@
 import { X } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const photos = [
-  "/imagine_images/gallery/g02.jpg",
-  "/imagine_images/gallery/g10.jpg",
-  "/imagine_images/gallery/g03.jpg",
-  "/imagine_images/gallery/g05.jpg",
-  "/imagine_images/gallery/g01.jpg",
-  "/imagine_images/gallery/g06.jpg",
-  "/imagine_images/gallery/g08.jpg",
-  "/imagine_images/gallery/g04.jpg",
-  "/imagine_images/gallery/g07.jpg",
-  "/imagine_images/gallery/g09.jpg",
-  "/imagine_images/gallery/g11.jpg",
-  "/imagine_images/gallery/g12.jpg",
-  "/imagine_images/gallery/g13.jpg",
-  "/imagine_images/gallery/g14.jpg",
+const rows = [
+  ["/imagine_images/gallery/g03.jpg", "/imagine_images/gallery/g05.jpg", "/imagine_images/gallery/g13.jpg"],
+  ["/imagine_images/gallery/g04.jpg", "/imagine_images/gallery/g07.jpg"],
+  ["/imagine_images/gallery/g09.jpg"],
+  ["/imagine_images/gallery/g08.jpg", "/imagine_images/gallery/g06.jpg"],
+  ["/imagine_images/gallery/g01.jpg", "/imagine_images/gallery/g10.jpg", "/imagine_images/gallery/g14.jpg"],
+  ["/imagine_images/gallery/g02.jpg", "/imagine_images/gallery/g12.jpg", "/imagine_images/gallery/g11.jpg"],
 ];
 
 export function GalleryPage() {
   const [open, setOpen] = useState<string | null>(null);
+  let count = 0;
 
   useEffect(() => {
     if (!open) return;
@@ -33,24 +26,33 @@ export function GalleryPage() {
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">
       <p className="text-xs uppercase tracking-widest text-rose">Galeri</p>
-      <h1 className="mt-3 max-w-3xl font-display text-5xl leading-tight">Our Moments, Our Stories</h1>
-      <div className="mt-10 grid grid-cols-2 items-start gap-x-4 gap-y-10 md:grid-cols-3 md:gap-x-5">
-        {photos.map((src, index) => {
-          const number = String(index + 1).padStart(2, "0");
-          return (
-            <figure key={src} className="flex flex-col">
-              <button
-                type="button"
-                onClick={() => setOpen(src)}
-                className="flex aspect-[3/4] w-full items-center justify-center"
-                aria-label={`Perbesar foto ${number}`}
-              >
-                <img src={src} alt="" className="max-h-full max-w-full object-contain" />
-              </button>
-              <figcaption className="mt-3 text-xs tracking-widest text-rose">{number}</figcaption>
-            </figure>
-          );
-        })}
+      <h1 className="mt-3 font-display text-5xl leading-tight">Our Moments, Our Stories</h1>
+      <div className="mt-12 space-y-12">
+        {rows.map((row) => (
+          <div
+            key={row[0]}
+            className={
+              row.length === 1
+                ? "grid grid-cols-1"
+                : row.length === 2
+                  ? "grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2"
+                  : "grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-3"
+            }
+          >
+            {row.map((src) => {
+              count += 1;
+              const number = String(count).padStart(2, "0");
+              return (
+                <figure key={src}>
+                  <button type="button" onClick={() => setOpen(src)} className="block w-full" aria-label={`Perbesar foto ${number}`}>
+                    <img src={src} alt="" className="h-auto w-full" />
+                  </button>
+                  <figcaption className="mt-3 text-xs tracking-widest text-rose">{number}</figcaption>
+                </figure>
+              );
+            })}
+          </div>
+        ))}
       </div>
       {open ? (
         <div
