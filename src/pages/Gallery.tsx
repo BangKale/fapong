@@ -4,24 +4,18 @@ import { useEffect, useState } from "react";
 const groups = [
   {
     frame: "aspect-[4/3]",
-    cols: "grid-cols-1 sm:grid-cols-2",
-    srcs: [
-      "/imagine_images/gallery/g03.jpg",
-      "/imagine_images/gallery/g05.jpg",
-      "/imagine_images/gallery/g04.jpg",
-      "/imagine_images/gallery/g07.jpg",
-      "/imagine_images/gallery/g13.jpg",
-    ],
+    cols: "grid-cols-1 sm:grid-cols-3",
+    srcs: ["/imagine_images/gallery/g03.jpg", "/imagine_images/gallery/g05.jpg", "/imagine_images/gallery/g13.jpg"],
   },
   {
     frame: "aspect-video",
-    cols: "grid-cols-1 sm:grid-cols-2",
-    srcs: ["/imagine_images/gallery/g09.jpg", "/imagine_images/gallery/g08.jpg", "/imagine_images/gallery/g06.jpg"],
+    cols: "grid-cols-1",
+    srcs: ["/imagine_images/gallery/g08.jpg"],
   },
   {
     frame: "aspect-[3/4]",
     cols: "grid-cols-2 sm:grid-cols-3",
-    srcs: ["/imagine_images/gallery/g01.jpg", "/imagine_images/gallery/g10.jpg", "/imagine_images/gallery/g14.jpg"],
+    srcs: ["/imagine_images/gallery/g10.jpg"],
   },
   {
     frame: "aspect-[9/16]",
