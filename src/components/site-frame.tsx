@@ -9,8 +9,9 @@ export function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-rose/30 bg-cream/95 backdrop-blur-sm">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2">
-        <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
-          <img src="/logo.svg" alt="Fapong Gallery" className="h-14 w-14 object-contain sm:h-16 sm:w-16" />
+        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+          <img src="/logo.svg" alt="" className="h-12 w-12 object-contain sm:h-14 sm:w-14" />
+          <span className="brand-wordmark">Fapong<span className="sr-only"> Gallery</span><small>Costume Gallery</small></span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
           {nav.map((item) => (
@@ -30,6 +31,7 @@ export function Header() {
         <button
           type="button"
           className="inline-flex h-11 w-11 items-center justify-center md:hidden"
+          aria-controls="mobile-navigation"
           aria-expanded={open}
           aria-label={open ? "Tutup menu" : "Buka menu"}
           onClick={() => setOpen((v) => !v)}
@@ -38,7 +40,7 @@ export function Header() {
         </button>
       </div>
       {open ? (
-        <nav className="border-t border-rose/30 px-6 py-3 md:hidden">
+        <nav id="mobile-navigation" className="border-t border-rose/30 px-6 py-3 md:hidden">
           {nav.map((item) => (
             <NavLink
               key={item.to}
@@ -59,7 +61,7 @@ export function Header() {
 export function Footer() {
   return (
     <>
-      <footer className="border-t border-rose/30">
+      <footer className="site-footer border-t border-rose/30">
         <div className="mx-auto grid max-w-6xl gap-8 px-6 py-12 md:grid-cols-3">
           <div>
             <p className="font-display text-3xl">Fapong.gallery</p>

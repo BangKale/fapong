@@ -40,7 +40,7 @@ export function GalleryPage() {
   }, [open]);
 
   return (
-    <main className="mx-auto max-w-6xl px-6 py-12">
+    <main id="main-content" className="mx-auto max-w-6xl px-6 py-12">
       <p className="text-xs uppercase tracking-widest text-rose">Galeri</p>
       <h1 className="mt-3 font-display text-5xl leading-tight">Our Moments, Our Stories</h1>
       <div className="mt-12 space-y-12">
