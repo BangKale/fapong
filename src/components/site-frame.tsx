@@ -1,5 +1,5 @@
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, ShoppingBag, X } from "lucide-react";
 import { useState } from "react";
 import { nav } from "@/data/content";
 
@@ -8,7 +8,7 @@ export function Header() {
   const home = useLocation().pathname === "/";
 
   return (
-    <header className={home ? "absolute inset-x-0 top-0 z-20 bg-transparent" : "sticky top-0 z-20 border-b border-rose/30 bg-cream/95 backdrop-blur-sm"}>
+    <header className={home ? "absolute inset-x-0 top-0 z-20 border-b border-white/15 bg-transparent" : "sticky top-0 z-20 border-b border-rose/30 bg-cream/95 backdrop-blur-sm"}>
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-2">
         <Link to="/" className="flex items-center" onClick={() => setOpen(false)}>
           <img src="/logo.svg" alt="Fapong Gallery" className="h-14 w-14 object-contain sm:h-16 sm:w-16" />
@@ -22,8 +22,8 @@ export function Header() {
               className={({ isActive }) =>
                 home
                   ? isActive
-                    ? "rounded-full bg-cream px-4 py-1.5 text-sm text-ink"
-                    : "text-sm text-cream/85"
+                    ? "rounded-full bg-[#e7c98a] px-4 py-1.5 text-sm text-ink"
+                    : "text-sm text-cream"
                   : isActive
                     ? "text-sm text-ink"
                     : "text-sm text-muted"
@@ -35,9 +35,11 @@ export function Header() {
         </nav>
         <Link
           to="/contact"
-          className={home ? "hidden rounded-full border border-cream/80 px-4 py-2 text-sm text-cream md:inline-flex" : "hidden bg-ink px-4 py-2 text-sm text-cream md:inline-flex"}
+          className={home ? "hidden items-center gap-2 rounded-full border border-[#e7c98a] px-4 py-2 text-sm text-[#e7c98a] md:inline-flex" : "hidden bg-ink px-4 py-2 text-sm text-cream md:inline-flex"}
         >
-          Sewa kostum
+          {home ? <ShoppingBag size={15} /> : null}
+          Sewa Kostum
+          {home ? <span aria-hidden="true">→</span> : null}
         </Link>
         <button
           type="button"
