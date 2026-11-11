@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const points = [
   ["Sejak 2021", "Fapong.gallery merawat kostum Jaipong agar tetap layak naik panggung."],
   ["Satu foto, satu set", "Gambar di katalog adalah busana yang sama dengan yang disewakan."],
-  ["Karawang", "Studio berada di depan Rumah Beras. Jadwal diatur lewat WhatsApp."],
+  ["Karawang", "Studio berada di Fapong Gallery. Jadwal diatur lewat WhatsApp."],
 ];
 
 export function AboutPage() {

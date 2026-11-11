@@ -16,7 +16,7 @@ export function ContactPage() {
         {[
           ["01", "Pilih set", "Buka katalog, lalu catat nomor dan nama kostumnya."],
           ["02", "Kirim tanggal", "Sebutkan tanggal acara dan jumlah penari lewat WhatsApp."],
-          ["03", "Ambil di studio", "Pengambilan di depan Rumah Beras, Jalan Bunut Kertayasa."],
+          ["03", "Ambil di studio", "Pengambilan di Fapong Gallery, Jalan Bunut Kertayasa."],
         ].map(([n, title, copy]) => (
           <li key={n}>
             <p className="text-xs tracking-widest text-rose">{n}</p>
@@ -55,7 +55,7 @@ export function ContactPage() {
                 className="underline decoration-rose underline-offset-4"
                 href="https://www.google.com/maps/search/?api=1&query=-6.3128246,107.2911568"
               >
-                Depan Rumah Beras
+                Fapong Gallery
               </a>
               <span className="mt-1 block text-muted">
                 Jalan Bunut Kertayasa, Karawang Kulon, Karawang Barat, Jawa Barat 41311
@@ -93,12 +93,12 @@ export function ContactPage() {
       </form>
       <section className="md:col-span-2">
         <p className="text-xs uppercase tracking-widest text-rose">Peta</p>
-        <h2 className="mt-2 font-display text-3xl">Depan Rumah Beras</h2>
+        <h2 className="mt-2 font-display text-3xl">Fapong Gallery</h2>
         <p className="mt-2 text-sm text-muted">
           Jalan Bunut Kertayasa, Karawang Kulon, Karawang Barat, Jawa Barat 41311
         </p>
         <iframe
-          title="Peta Fapong.gallery, depan Rumah Beras di Jalan Bunut Kertayasa"
+          title="Peta Fapong Gallery di Jalan Bunut Kertayasa"
           src="https://maps.google.com/maps?q=-6.3128246,107.2911568&z=17&hl=id&output=embed"
           className="mt-4 h-80 w-full border border-rose/30"
           loading="lazy"

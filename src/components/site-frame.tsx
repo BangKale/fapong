@@ -67,7 +67,7 @@ export function Footer() {
           </div>
           <div className="text-sm">
             <p className="text-muted">Studio</p>
-            <p className="mt-2">Depan Rumah Beras</p>
+            <p className="mt-2">Fapong Gallery</p>
             <p>Karawang Kulon, Karawang Barat</p>
             <div className="mt-3 flex gap-2">
               <a href="https://www.instagram.com/fapong.gallery/" aria-label="Instagram" className="inline-flex h-10 w-10 items-center justify-center border border-rose/40 text-ink">
