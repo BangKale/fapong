@@ -1,3 +1,4 @@
+import { origin } from "@/data/business.json";
 import pageMetadata from "@/data/seo.json";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -31,7 +32,7 @@ export function Seo() {
     document.title = path.startsWith("/admin") ? "Admin | Fapong Gallery" : page?.title || "Halaman Tidak Ditemukan | Fapong Gallery";
     meta("description", page?.description || "Halaman Fapong Gallery tidak ditemukan.");
     meta("robots", page ? "index,follow" : "noindex,follow");
-    const url = new URL(path, window.location.origin).href;
+    const url = new URL(path, origin).href;
     let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement("link");
@@ -39,7 +40,7 @@ export function Seo() {
       document.head.appendChild(canonical);
     }
     canonical.href = url;
-    const image = new URL(item?.src || "/imagine_images/hero_stage.jpg", window.location.origin).href;
+    const image = new URL(item?.src || "/imagine_images/hero_stage.jpg", origin).href;
     meta("og:title", document.title, true);
     meta("og:description", page?.description || "Halaman tidak ditemukan.", true);
     meta("og:type", "website", true);
@@ -61,10 +62,10 @@ export function Seo() {
     structured.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
-      "@id": `${window.location.origin}/#business`,
+      "@id": `${origin}/#business`,
       name: "Fapong Gallery",
-      url: window.location.origin,
-      image: new URL("/imagine_images/hero_stage.jpg", window.location.origin).href,
+      url: origin,
+      image: new URL("/imagine_images/hero_stage.jpg", origin).href,
       telephone: "+6285771244199",
       description: pages["/"].description,
       address: {

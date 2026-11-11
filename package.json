@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "prebuild": "node scripts/copy-media.mjs",
-    "build": "vite build",
+    "build": "vite build && node scripts/build-seo.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
