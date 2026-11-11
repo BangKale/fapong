@@ -10,7 +10,7 @@ export function Home() {
           src={hero}
           alt=""
           fetchPriority="high"
-          className="absolute inset-0 -z-20 h-full w-full object-contain object-top md:object-right"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[center_30%] md:object-[center_15%]"
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black/90 via-black/50 to-black/15 md:bg-gradient-to-r md:from-black/85 md:via-black/50 md:to-black/10" />
         <div className="mx-auto flex min-h-[740px] max-w-6xl items-end px-6 py-12 md:min-h-[680px] md:items-center md:py-20">
